@@ -105,7 +105,7 @@
     
   
     
-      <strong class="classes">Classes:</strong> <span class='object_link'><a href="SearchForm/RefNotFoundException.html" title="Prismic::SearchForm::RefNotFoundException (class)">RefNotFoundException</a></span>, <span class='object_link'><a href="SearchForm/UnsupportedFormKind.html" title="Prismic::SearchForm::UnsupportedFormKind (class)">UnsupportedFormKind</a></span>
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="SearchForm/FormSearchException.html" title="Prismic::SearchForm::FormSearchException (class)">FormSearchException</a></span>, <span class='object_link'><a href="SearchForm/RefNotFoundException.html" title="Prismic::SearchForm::RefNotFoundException (class)">RefNotFoundException</a></span>, <span class='object_link'><a href="SearchForm/UnsupportedFormKind.html" title="Prismic::SearchForm::UnsupportedFormKind (class)">UnsupportedFormKind</a></span>
     
   
 </p>
@@ -115,6 +115,33 @@
 
   <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
   <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#api-instance_method" title="#api (instance method)">- (Object) <strong>api</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute api.</p>
+</div></span>
+  
+</li>
+
     
       <li class="public ">
   <span class="summary_signature">
@@ -274,7 +301,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">- (SearchForm) <strong>initialize</strong>(form, data = form.default_data) </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (SearchForm) <strong>initialize</strong>(api, form, data = form.default_data) </a>
     
 
     
@@ -394,7 +421,7 @@
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    - (<tt><span class='object_link'><a href="" title="Prismic::SearchForm (class)">SearchForm</a></span></tt>) <strong>initialize</strong>(form, data = form.default_data) 
+    - (<tt><span class='object_link'><a href="" title="Prismic::SearchForm (class)">SearchForm</a></span></tt>) <strong>initialize</strong>(api, form, data = form.default_data) 
   
 
   
@@ -420,12 +447,14 @@
 35
 36
 37
-38</pre>
+38
+39</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 35</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_form'>form</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='op'>=</span><span class='id identifier rubyid_form'>form</span><span class='period'>.</span><span class='id identifier rubyid_default_data'>default_data</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_api'>api</span><span class='comma'>,</span> <span class='id identifier rubyid_form'>form</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='op'>=</span><span class='id identifier rubyid_form'>form</span><span class='period'>.</span><span class='id identifier rubyid_default_data'>default_data</span><span class='rparen'>)</span>
+  <span class='ivar'>@api</span> <span class='op'>=</span> <span class='id identifier rubyid_api'>api</span>
   <span class='ivar'>@form</span> <span class='op'>=</span> <span class='id identifier rubyid_form'>form</span>
   <span class='ivar'>@data</span> <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span>
 <span class='kw'>end</span></pre>
@@ -440,9 +469,52 @@
     <h2>Instance Attribute Details</h2>
     
       
-      <span id="data=-instance_method"></span>
+      <span id="api=-instance_method"></span>
       <div class="method_details first">
-  <h3 class="signature first" id="data-instance_method">
+  <h3 class="signature first" id="api-instance_method">
+  
+    - (<tt>Object</tt>) <strong>api</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute api</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+33
+34
+35</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 33</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_api'>api</span>
+  <span class='ivar'>@api</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="data=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="data-instance_method">
   
     - (<tt>Object</tt>) <strong>data</strong> 
   
@@ -547,12 +619,12 @@
       <pre class="lines">
 
 
-56
 57
-58</pre>
+58
+59</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 56</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 57</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_action'>action</span>
   <span class='id identifier rubyid_form'>form</span><span class='period'>.</span><span class='id identifier rubyid_action'>action</span>
@@ -577,12 +649,12 @@
       <pre class="lines">
 
 
-52
 53
-54</pre>
+54
+55</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 52</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 53</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_enctype'>enctype</span>
   <span class='id identifier rubyid_form'>form</span><span class='period'>.</span><span class='id identifier rubyid_enctype'>enctype</span>
@@ -607,12 +679,12 @@
       <pre class="lines">
 
 
-60
 61
-62</pre>
+62
+63</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 60</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 61</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fields'>fields</span>
   <span class='id identifier rubyid_form'>form</span><span class='period'>.</span><span class='id identifier rubyid_fields'>fields</span>
@@ -637,12 +709,12 @@
       <pre class="lines">
 
 
-44
 45
-46</pre>
+46
+47</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 44</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 45</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_form_method'>form_method</span>
   <span class='id identifier rubyid_form'>form</span><span class='period'>.</span><span class='id identifier rubyid_form_method'>form_method</span>
@@ -667,12 +739,12 @@
       <pre class="lines">
 
 
-40
 41
-42</pre>
+42
+43</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 40</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 41</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_name'>name</span>
   <span class='id identifier rubyid_form'>form</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span>
@@ -697,16 +769,16 @@
       <pre class="lines">
 
 
-89
-90
-91
-92
-93
-94
-95</pre>
+95
+96
+97
+98
+99
+100
+101</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 89</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 95</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_query'>query</span><span class='lparen'>(</span><span class='id identifier rubyid_query'>query</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_strip_brakets'>strip_brakets</span> <span class='op'>=</span> <span class='const'>Proc</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_str'>str</span><span class='op'>|</span> <span class='id identifier rubyid_str'>str</span><span class='period'>.</span><span class='id identifier rubyid_strip'>strip</span><span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='id identifier rubyid_str'>str</span><span class='period'>.</span><span class='id identifier rubyid_strip'>strip</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>-</span> <span class='int'>2</span><span class='rbracket'>]</span><span class='rbrace'>}</span>
@@ -735,12 +807,12 @@
       <pre class="lines">
 
 
-48
 49
-50</pre>
+50
+51</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 48</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 49</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_rel'>rel</span>
   <span class='id identifier rubyid_form'>form</span><span class='period'>.</span><span class='id identifier rubyid_rel'>rel</span>
@@ -765,7 +837,6 @@
       <pre class="lines">
 
 
-64
 65
 66
 67
@@ -788,10 +859,16 @@
 84
 85
 86
-87</pre>
+87
+88
+89
+90
+91
+92
+93</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 64</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 65</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_submit'>submit</span><span class='lparen'>(</span><span class='id identifier rubyid_ref'>ref</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_form_method'>form_method</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>GET</span><span class='tstring_end'>&quot;</span></span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_enctype'>enctype</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>application/x-www-form-urlencoded</span><span class='tstring_end'>&quot;</span></span>
@@ -801,7 +878,9 @@
     <span class='id identifier rubyid_uri'>uri</span> <span class='op'>=</span> <span class='const'>URI</span><span class='lparen'>(</span><span class='id identifier rubyid_action'>action</span><span class='rparen'>)</span>
     <span class='id identifier rubyid_uri'>uri</span><span class='period'>.</span><span class='id identifier rubyid_query'>query</span> <span class='op'>=</span> <span class='const'>URI</span><span class='period'>.</span><span class='id identifier rubyid_encode_www_form'>encode_www_form</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
 
-    <span class='id identifier rubyid_request'>request</span> <span class='op'>=</span> <span class='const'>Net</span><span class='op'>::</span><span class='const'>HTTP</span><span class='op'>::</span><span class='const'>Get</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_uri'>uri</span><span class='period'>.</span><span class='id identifier rubyid_request_uri'>request_uri</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_request_uri'>request_uri</span> <span class='op'>=</span> <span class='id identifier rubyid_uri'>uri</span><span class='period'>.</span><span class='id identifier rubyid_request_uri'>request_uri</span>
+    <span class='id identifier rubyid_request_uri'>request_uri</span> <span class='op'>+=</span> <span class='lparen'>(</span><span class='id identifier rubyid_request_uri'>request_uri</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\?</span><span class='regexp_end'>/</span></span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>&amp;</span><span class='tstring_end'>&#39;</span></span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>?</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>access_token=</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_api'>api</span><span class='period'>.</span><span class='id identifier rubyid_access_token'>access_token</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_api'>api</span><span class='period'>.</span><span class='id identifier rubyid_access_token'>access_token</span>
+    <span class='id identifier rubyid_request'>request</span> <span class='op'>=</span> <span class='const'>Net</span><span class='op'>::</span><span class='const'>HTTP</span><span class='op'>::</span><span class='const'>Get</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_request_uri'>request_uri</span><span class='rparen'>)</span>
     <span class='id identifier rubyid_request'>request</span><span class='period'>.</span><span class='id identifier rubyid_add_field'>add_field</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Accept</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>application/json</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
 
     <span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='const'>Net</span><span class='op'>::</span><span class='const'>HTTP</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_uri'>uri</span><span class='period'>.</span><span class='id identifier rubyid_host'>host</span><span class='comma'>,</span> <span class='id identifier rubyid_uri'>uri</span><span class='period'>.</span><span class='id identifier rubyid_port'>port</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_start'>start</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_http'>http</span><span class='op'>|</span>
@@ -810,7 +889,10 @@
 
     <span class='id identifier rubyid_raise'>raise</span> <span class='const'>RefNotFoundException</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Ref </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_ref'>ref</span><span class='embexpr_end'>}</span><span class='tstring_content'> not found</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_code'>code</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>404</span><span class='tstring_end'>&quot;</span></span>
 
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>FormSearchException</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Error : </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_code'>code</span> <span class='op'>!=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>200</span><span class='tstring_end'>&quot;</span></span>
+
     <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_doc'>doc</span><span class='op'>|</span>
+      <span class='id identifier rubyid_raise'>raise</span> <span class='const'>FormSearchException</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Error : </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_doc'>doc</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>error</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_doc'>doc</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>error</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
       <span class='const'>Prismic</span><span class='op'>::</span><span class='const'>JsonParser</span><span class='period'>.</span><span class='id identifier rubyid_document_parser'>document_parser</span><span class='lparen'>(</span><span class='id identifier rubyid_doc'>doc</span><span class='rparen'>)</span>
     <span class='kw'>end</span>
   <span class='kw'>else</span>
@@ -827,7 +909,7 @@
 </div>
 
     <div id="footer">
-  Generated on Wed Oct  2 15:40:37 2013 by
+  Generated on Sat Oct 12 12:31:23 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.2 (ruby-2.0.0).
 </div>

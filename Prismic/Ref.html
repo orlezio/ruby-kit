@@ -192,7 +192,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#scheduledAt-instance_method" title="#scheduledAt (instance method)">- (Object) <strong>scheduledAt</strong> </a>
+      <a href="#scheduled_at-instance_method" title="#scheduled_at (instance method)">- (Object) <strong>scheduled_at</strong> </a>
     
 
     
@@ -210,7 +210,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute scheduledAt.</p>
+<p>Returns the value of attribute scheduled_at.</p>
 </div></span>
   
 </li>
@@ -232,7 +232,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Ref) <strong>initialize</strong>(ref, label, is_master = false) </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Ref) <strong>initialize</strong>(ref, label, is_master = false, scheduled_at = nil) </a>
     
 
     
@@ -264,7 +264,7 @@
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    - (<tt><span class='object_link'><a href="" title="Prismic::Ref (class)">Ref</a></span></tt>) <strong>initialize</strong>(ref, label, is_master = false) 
+    - (<tt><span class='object_link'><a href="" title="Prismic::Ref (class)">Ref</a></span></tt>) <strong>initialize</strong>(ref, label, is_master = false, scheduled_at = nil) 
   
 
   
@@ -287,19 +287,21 @@
       <pre class="lines">
 
 
-143
-144
-145
-146
-147</pre>
+150
+151
+152
+153
+154
+155</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 143</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 150</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_ref'>ref</span><span class='comma'>,</span> <span class='id identifier rubyid_label'>label</span><span class='comma'>,</span> <span class='id identifier rubyid_is_master'>is_master</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_ref'>ref</span><span class='comma'>,</span> <span class='id identifier rubyid_label'>label</span><span class='comma'>,</span> <span class='id identifier rubyid_is_master'>is_master</span> <span class='op'>=</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='id identifier rubyid_scheduled_at'>scheduled_at</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='ivar'>@ref</span> <span class='op'>=</span> <span class='id identifier rubyid_ref'>ref</span>
-  <span class='ivar'>@label</span> <span class='op'>=</span> <span class='id identifier rubyid_label'>label</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span>
+  <span class='ivar'>@label</span> <span class='op'>=</span> <span class='id identifier rubyid_label'>label</span>
   <span class='ivar'>@is_master</span> <span class='op'>=</span> <span class='id identifier rubyid_is_master'>is_master</span>
+  <span class='ivar'>@scheduled_at</span> <span class='op'>=</span> <span class='id identifier rubyid_scheduled_at'>scheduled_at</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -343,12 +345,12 @@
       <pre class="lines">
 
 
-141
-142
-143</pre>
+148
+149
+150</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 141</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 148</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_is_master'>is_master</span>
   <span class='ivar'>@is_master</span>
@@ -386,12 +388,12 @@
       <pre class="lines">
 
 
-141
-142
-143</pre>
+148
+149
+150</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 141</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 148</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_label'>label</span>
   <span class='ivar'>@label</span>
@@ -429,12 +431,12 @@
       <pre class="lines">
 
 
-141
-142
-143</pre>
+148
+149
+150</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 141</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 148</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_ref'>ref</span>
   <span class='ivar'>@ref</span>
@@ -445,11 +447,11 @@
 </div>
     
       
-      <span id="scheduledAt=-instance_method"></span>
+      <span id="scheduled_at=-instance_method"></span>
       <div class="method_details ">
-  <h3 class="signature " id="scheduledAt-instance_method">
+  <h3 class="signature " id="scheduled_at-instance_method">
   
-    - (<tt>Object</tt>) <strong>scheduledAt</strong> 
+    - (<tt>Object</tt>) <strong>scheduled_at</strong> 
   
 
   
@@ -458,7 +460,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the value of attribute scheduledAt</p>
+<p>Returns the value of attribute scheduled_at</p>
 
 
   </div>
@@ -472,15 +474,15 @@
       <pre class="lines">
 
 
-141
-142
-143</pre>
+148
+149
+150</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 141</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 148</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_scheduledAt'>scheduledAt</span>
-  <span class='ivar'>@scheduledAt</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_scheduled_at'>scheduled_at</span>
+  <span class='ivar'>@scheduled_at</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -493,7 +495,7 @@
 </div>
 
     <div id="footer">
-  Generated on Wed Oct  2 15:40:38 2013 by
+  Generated on Sat Oct 12 12:31:23 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.2 (ruby-2.0.0).
 </div>
