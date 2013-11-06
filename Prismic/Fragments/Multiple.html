@@ -6,7 +6,7 @@
 <title>
   Class: Prismic::Fragments::Multiple
   
-    &mdash; Documentation by YARD 0.8.7.2
+    &mdash; Documentation by YARD 0.8.7.3
   
 </title>
 
@@ -296,12 +296,12 @@
       <pre class="lines">
 
 
-6
 7
-8</pre>
+8
+9</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/multiple.rb', line 6</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/multiple.rb', line 7</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_fragments'>fragments</span><span class='op'>=</span><span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rparen'>)</span>
   <span class='ivar'>@fragments</span> <span class='op'>=</span> <span class='id identifier rubyid_fragments'>fragments</span>
@@ -344,12 +344,12 @@
       <pre class="lines">
 
 
-4
 5
-6</pre>
+6
+7</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/multiple.rb', line 4</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/multiple.rb', line 5</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fragments'>fragments</span>
   <span class='ivar'>@fragments</span>
@@ -381,12 +381,12 @@
       <pre class="lines">
 
 
-14
 15
-16</pre>
+16
+17</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/multiple.rb', line 14</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/multiple.rb', line 15</span>
 
 <span class='kw'>def</span> <span class='op'>[]</span><span class='lparen'>(</span><span class='id identifier rubyid_i'>i</span><span class='rparen'>)</span>
   <span class='ivar'>@fragments</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span>
@@ -411,12 +411,12 @@
       <pre class="lines">
 
 
-22
 23
-24</pre>
+24
+25</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/multiple.rb', line 22</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/multiple.rb', line 23</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_as_html'>as_html</span><span class='lparen'>(</span><span class='id identifier rubyid_link_resolver'>link_resolver</span><span class='rparen'>)</span>
   <span class='ivar'>@fragments</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_f'>f</span><span class='op'>|</span> <span class='id identifier rubyid_f'>f</span><span class='period'>.</span><span class='id identifier rubyid_as_html'>as_html</span><span class='lparen'>(</span><span class='id identifier rubyid_link_resolver'>link_resolver</span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span>
@@ -441,12 +441,12 @@
       <pre class="lines">
 
 
-18
 19
-20</pre>
+20
+21</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/multiple.rb', line 18</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/multiple.rb', line 19</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_fragment'>fragment</span><span class='rparen'>)</span>
   <span class='ivar'>@fragments</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_fragment'>fragment</span><span class='rparen'>)</span>
@@ -475,12 +475,12 @@
       <pre class="lines">
 
 
-10
 11
-12</pre>
+12
+13</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/multiple.rb', line 10</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/multiple.rb', line 11</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_size'>size</span>
   <span class='ivar'>@fragments</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span>
@@ -495,9 +495,9 @@
 </div>
 
     <div id="footer">
-  Generated on Sat Oct 12 12:31:24 2013 by
+  Generated on Wed Nov  6 14:20:50 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.2 (ruby-2.0.0).
+  0.8.7.3 (ruby-1.9.3).
 </div>
 
   </body>

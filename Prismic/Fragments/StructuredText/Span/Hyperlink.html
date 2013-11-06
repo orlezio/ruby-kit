@@ -6,7 +6,7 @@
 <title>
   Class: Prismic::Fragments::StructuredText::Span::Hyperlink
   
-    &mdash; Documentation by YARD 0.8.7.2
+    &mdash; Documentation by YARD 0.8.7.3
   
 </title>
 
@@ -261,13 +261,13 @@
       <pre class="lines">
 
 
-77
 78
 79
-80</pre>
+80
+81</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/structured_text.rb', line 77</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/structured_text.rb', line 78</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_start'>start</span><span class='comma'>,</span> <span class='id identifier rubyid_finish'>finish</span><span class='comma'>,</span> <span class='id identifier rubyid_link'>link</span><span class='rparen'>)</span>
   <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_start'>start</span><span class='comma'>,</span> <span class='id identifier rubyid_finish'>finish</span><span class='rparen'>)</span>
@@ -311,12 +311,12 @@
       <pre class="lines">
 
 
-76
 77
-78</pre>
+78
+79</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/structured_text.rb', line 76</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/structured_text.rb', line 77</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_link'>link</span>
   <span class='ivar'>@link</span>
@@ -348,12 +348,12 @@
       <pre class="lines">
 
 
-85
 86
-87</pre>
+87
+88</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/structured_text.rb', line 85</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/structured_text.rb', line 86</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_end_html'>end_html</span><span class='lparen'>(</span><span class='id identifier rubyid_link_resolver'>link_resolver</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;/a&gt;</span><span class='tstring_end'>&quot;</span></span>
@@ -378,17 +378,17 @@
       <pre class="lines">
 
 
-81
 82
 83
-84</pre>
+84
+85</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/structured_text.rb', line 81</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/structured_text.rb', line 82</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_start_html'>start_html</span><span class='lparen'>(</span><span class='id identifier rubyid_link_resolver'>link_resolver</span><span class='rparen'>)</span>
   <span class='comment'># Quick-and-dirty way to generate the right &lt;a&gt; tag
-</span>  <span class='id identifier rubyid_link'>link</span><span class='period'>.</span><span class='id identifier rubyid_as_html'>as_html</span><span class='lparen'>(</span><span class='id identifier rubyid_link_resolver'>link_resolver</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_sub'>sub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(&lt;[^&gt;]+&gt;).*</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>\1</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+</span>  <span class='id identifier rubyid_link'>link</span><span class='period'>.</span><span class='id identifier rubyid_as_html'>as_html</span><span class='lparen'>(</span><span class='id identifier rubyid_link_resolver'>link_resolver</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_sub'>sub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(&lt;[^&gt;]+&gt;).*</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>\1</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -400,9 +400,9 @@
 </div>
 
     <div id="footer">
-  Generated on Sat Oct 12 12:31:24 2013 by
+  Generated on Wed Nov  6 14:20:50 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.2 (ruby-2.0.0).
+  0.8.7.3 (ruby-1.9.3).
 </div>
 
   </body>

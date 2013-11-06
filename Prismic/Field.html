@@ -6,7 +6,7 @@
 <title>
   Class: Prismic::Field
   
-    &mdash; Documentation by YARD 0.8.7.2
+    &mdash; Documentation by YARD 0.8.7.3
   
 </title>
 
@@ -160,6 +160,35 @@
 </li>
 
     
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#repeatable-instance_method" title="#repeatable (instance method)">- (Object) <strong>repeatable</strong> </a>
+    
+
+    
+      (also: #repeatable?)
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute repeatable.</p>
+</div></span>
+  
+</li>
+
+    
   </ul>
 
 
@@ -176,7 +205,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Field) <strong>initialize</strong>(field_type, default) </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Field) <strong>initialize</strong>(field_type, default, repeatable = false) </a>
     
 
     
@@ -208,7 +237,7 @@
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    - (<tt><span class='object_link'><a href="" title="Prismic::Field (class)">Field</a></span></tt>) <strong>initialize</strong>(field_type, default) 
+    - (<tt><span class='object_link'><a href="" title="Prismic::Field (class)">Field</a></span></tt>) <strong>initialize</strong>(field_type, default, repeatable = false) 
   
 
   
@@ -231,17 +260,19 @@
       <pre class="lines">
 
 
-111
-112
-113
-114</pre>
+123
+124
+125
+126
+127</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 111</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 123</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_field_type'>field_type</span><span class='comma'>,</span> <span class='id identifier rubyid_default'>default</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_field_type'>field_type</span><span class='comma'>,</span> <span class='id identifier rubyid_default'>default</span><span class='comma'>,</span> <span class='id identifier rubyid_repeatable'>repeatable</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
   <span class='ivar'>@field_type</span> <span class='op'>=</span> <span class='id identifier rubyid_field_type'>field_type</span>
   <span class='ivar'>@default</span> <span class='op'>=</span> <span class='id identifier rubyid_default'>default</span>
+  <span class='ivar'>@repeatable</span> <span class='op'>=</span> <span class='id identifier rubyid_repeatable'>repeatable</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -281,12 +312,12 @@
       <pre class="lines">
 
 
-109
-110
-111</pre>
+121
+122
+123</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 109</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 121</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_default'>default</span>
   <span class='ivar'>@default</span>
@@ -324,15 +355,62 @@
       <pre class="lines">
 
 
-109
-110
-111</pre>
+121
+122
+123</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 109</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 121</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_field_type'>field_type</span>
   <span class='ivar'>@field_type</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="repeatable=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="repeatable-instance_method">
+  
+    - (<tt>Object</tt>) <strong>repeatable</strong> 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='repeatable?-instance_method'>repeatable?</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute repeatable</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+121
+122
+123</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 121</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_repeatable'>repeatable</span>
+  <span class='ivar'>@repeatable</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -345,9 +423,9 @@
 </div>
 
     <div id="footer">
-  Generated on Sat Oct 12 12:31:23 2013 by
+  Generated on Wed Nov  6 14:20:49 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.2 (ruby-2.0.0).
+  0.8.7.3 (ruby-1.9.3).
 </div>
 
   </body>

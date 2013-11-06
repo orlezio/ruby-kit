@@ -6,7 +6,7 @@
 <title>
   Exception: Prismic::Error
   
-    &mdash; Documentation by YARD 0.8.7.2
+    &mdash; Documentation by YARD 0.8.7.3
   
 </title>
 
@@ -114,7 +114,7 @@
 
 </div><div id="subclasses">
   <h2>Direct Known Subclasses</h2>
-  <p class="children"><span class='object_link'><a href="API/BadPrismicResponseError.html" title="Prismic::API::BadPrismicResponseError (class)">API::BadPrismicResponseError</a></span>, <span class='object_link'><a href="API/PrismicWSConnectionError.html" title="Prismic::API::PrismicWSConnectionError (class)">API::PrismicWSConnectionError</a></span>, <span class='object_link'><a href="Fragments/Image/ViewDoesNotExistException.html" title="Prismic::Fragments::Image::ViewDoesNotExistException (class)">Fragments::Image::ViewDoesNotExistException</a></span>, <span class='object_link'><a href="SearchForm/FormSearchException.html" title="Prismic::SearchForm::FormSearchException (class)">SearchForm::FormSearchException</a></span>, <span class='object_link'><a href="SearchForm/RefNotFoundException.html" title="Prismic::SearchForm::RefNotFoundException (class)">SearchForm::RefNotFoundException</a></span>, <span class='object_link'><a href="SearchForm/UnsupportedFormKind.html" title="Prismic::SearchForm::UnsupportedFormKind (class)">SearchForm::UnsupportedFormKind</a></span></p>
+  <p class="children"><span class='object_link'><a href="API/BadPrismicResponseError.html" title="Prismic::API::BadPrismicResponseError (class)">API::BadPrismicResponseError</a></span>, <span class='object_link'><a href="API/PrismicWSConnectionError.html" title="Prismic::API::PrismicWSConnectionError (class)">API::PrismicWSConnectionError</a></span>, <span class='object_link'><a href="Fragments/Image/ViewDoesNotExistException.html" title="Prismic::Fragments::Image::ViewDoesNotExistException (class)">Fragments::Image::ViewDoesNotExistException</a></span>, <span class='object_link'><a href="SearchForm/FormSearchException.html" title="Prismic::SearchForm::FormSearchException (class)">SearchForm::FormSearchException</a></span>, <span class='object_link'><a href="SearchForm/NoRefSetException.html" title="Prismic::SearchForm::NoRefSetException (class)">SearchForm::NoRefSetException</a></span>, <span class='object_link'><a href="SearchForm/RefNotFoundException.html" title="Prismic::SearchForm::RefNotFoundException (class)">SearchForm::RefNotFoundException</a></span>, <span class='object_link'><a href="SearchForm/UnsupportedFormKind.html" title="Prismic::SearchForm::UnsupportedFormKind (class)">SearchForm::UnsupportedFormKind</a></span></p>
 </div>
 
 
@@ -246,13 +246,13 @@
       <pre class="lines">
 
 
-9
 10
 11
-12</pre>
+12
+13</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 9</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 10</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='op'>=</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_cause'>cause</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_msg'>msg</span> <span class='op'>?</span> <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='id identifier rubyid_msg'>msg</span>
@@ -296,12 +296,12 @@
       <pre class="lines">
 
 
-8
 9
-10</pre>
+10
+11</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 8</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 9</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_cause'>cause</span>
   <span class='ivar'>@cause</span>
@@ -333,7 +333,6 @@
       <pre class="lines">
 
 
-13
 14
 15
 16
@@ -341,16 +340,17 @@
 18
 19
 20
-21</pre>
+21
+22</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 13</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 14</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_full_trace'>full_trace</span><span class='lparen'>(</span><span class='id identifier rubyid_e'>e</span><span class='op'>=</span><span class='kw'>self</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_first'>first</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_backtrace'>backtrace</span> <span class='op'>=</span> <span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_backtrace'>backtrace</span>
   <span class='id identifier rubyid_msg'>msg</span> <span class='op'>=</span> <span class='id identifier rubyid_e'>e</span> <span class='op'>==</span> <span class='kw'>self</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Caused by </span><span class='tstring_end'>&quot;</span></span>
-  <span class='id identifier rubyid_msg'>msg</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_first'>first</span><span class='embexpr_end'>}</span><span class='tstring_content'>: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_message'>message</span><span class='embexpr_end'>}</span><span class='tstring_content'> (</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span>
-  <span class='id identifier rubyid_stack'>stack</span> <span class='op'>=</span> <span class='id identifier rubyid_backtrace'>backtrace</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_s'>s</span><span class='op'>|</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\tfrom </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_s'>s</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_msg'>msg</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_first'>first</span><span class='rbrace'>}</span><span class='tstring_content'>: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_message'>message</span><span class='rbrace'>}</span><span class='tstring_content'> (</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='rbrace'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_stack'>stack</span> <span class='op'>=</span> <span class='id identifier rubyid_backtrace'>backtrace</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_s'>s</span><span class='op'>|</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\tfrom </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_s'>s</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
   <span class='id identifier rubyid_cause'>cause</span> <span class='op'>=</span> <span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:cause</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_cause'>cause</span> <span class='op'>:</span> <span class='kw'>nil</span>
   <span class='id identifier rubyid_cause_stack'>cause_stack</span> <span class='op'>=</span> <span class='id identifier rubyid_cause'>cause</span> <span class='op'>?</span> <span class='id identifier rubyid_full_trace'>full_trace</span><span class='lparen'>(</span><span class='id identifier rubyid_cause'>cause</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='kw'>nil</span>
   <span class='lbracket'>[</span><span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_stack'>stack</span><span class='comma'>,</span> <span class='id identifier rubyid_cause_stack'>cause_stack</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_compact'>compact</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -365,9 +365,9 @@
 </div>
 
     <div id="footer">
-  Generated on Sat Oct 12 12:31:23 2013 by
+  Generated on Wed Nov  6 14:20:49 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.2 (ruby-2.0.0).
+  0.8.7.3 (ruby-1.9.3).
 </div>
 
   </body>

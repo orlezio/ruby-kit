@@ -6,7 +6,7 @@
 <title>
   Class: Prismic::Fragments::Embed
   
-    &mdash; Documentation by YARD 0.8.7.2
+    &mdash; Documentation by YARD 0.8.7.3
   
 </title>
 
@@ -334,16 +334,16 @@
       <pre class="lines">
 
 
-6
 7
 8
 9
 10
 11
-12</pre>
+12
+13</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/embed.rb', line 6</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/embed.rb', line 7</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_embed_type'>embed_type</span><span class='comma'>,</span> <span class='id identifier rubyid_provider'>provider</span><span class='comma'>,</span> <span class='id identifier rubyid_url'>url</span><span class='comma'>,</span> <span class='id identifier rubyid_html'>html</span><span class='comma'>,</span> <span class='id identifier rubyid_o_embed_json'>o_embed_json</span><span class='rparen'>)</span>
   <span class='ivar'>@embed_type</span>   <span class='op'>=</span> <span class='id identifier rubyid_embed_type'>embed_type</span>
@@ -390,12 +390,12 @@
       <pre class="lines">
 
 
-4
 5
-6</pre>
+6
+7</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/embed.rb', line 4</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/embed.rb', line 5</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_embed_type'>embed_type</span>
   <span class='ivar'>@embed_type</span>
@@ -433,12 +433,12 @@
       <pre class="lines">
 
 
-4
 5
-6</pre>
+6
+7</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/embed.rb', line 4</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/embed.rb', line 5</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_html'>html</span>
   <span class='ivar'>@html</span>
@@ -476,12 +476,12 @@
       <pre class="lines">
 
 
-4
 5
-6</pre>
+6
+7</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/embed.rb', line 4</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/embed.rb', line 5</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_o_embed_json'>o_embed_json</span>
   <span class='ivar'>@o_embed_json</span>
@@ -519,12 +519,12 @@
       <pre class="lines">
 
 
-4
 5
-6</pre>
+6
+7</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/embed.rb', line 4</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/embed.rb', line 5</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_provider'>provider</span>
   <span class='ivar'>@provider</span>
@@ -562,12 +562,12 @@
       <pre class="lines">
 
 
-4
 5
-6</pre>
+6
+7</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/embed.rb', line 4</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/embed.rb', line 5</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_url'>url</span>
   <span class='ivar'>@url</span>
@@ -599,22 +599,22 @@
       <pre class="lines">
 
 
-14
 15
 16
 17
 18
 19
-20</pre>
+20
+21</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/embed.rb', line 14</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/embed.rb', line 15</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_as_html'>as_html</span><span class='lparen'>(</span><span class='id identifier rubyid_link_resolver'>link_resolver</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='heredoc_beg'>&lt;&lt;-HTML</span>
 <span class='tstring_content'>  &lt;div data-oembed=&quot;</span><span class='embvar'>#</span><span class='ivar'>@url</span><span class='tstring_content'>&quot;
-      data-oembed-type=&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@embed_type</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span><span class='embexpr_end'>}</span><span class='tstring_content'>&quot;
-      data-oembed-provider=&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@provider</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span><span class='embexpr_end'>}</span><span class='tstring_content'>&quot;&gt;</span><span class='embvar'>#</span><span class='ivar'>@html</span><span class='tstring_content'>&lt;/div&gt;
+      data-oembed-type=&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@embed_type</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span><span class='rbrace'>}</span><span class='tstring_content'>&quot;
+      data-oembed-provider=&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@provider</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span><span class='rbrace'>}</span><span class='tstring_content'>&quot;&gt;</span><span class='embvar'>#</span><span class='ivar'>@html</span><span class='tstring_content'>&lt;/div&gt;
 </span><span class='heredoc_end'>  HTML
 </span><span class='kw'>end</span></pre>
     </td>
@@ -627,9 +627,9 @@
 </div>
 
     <div id="footer">
-  Generated on Sat Oct 12 12:31:24 2013 by
+  Generated on Wed Nov  6 14:20:50 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.2 (ruby-2.0.0).
+  0.8.7.3 (ruby-1.9.3).
 </div>
 
   </body>

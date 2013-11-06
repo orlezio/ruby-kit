@@ -6,7 +6,7 @@
 <title>
   Class: Prismic::Fragments::StructuredText::Block::Text
   
-    &mdash; Documentation by YARD 0.8.7.2
+    &mdash; Documentation by YARD 0.8.7.3
   
 </title>
 
@@ -279,13 +279,13 @@
       <pre class="lines">
 
 
-95
 96
 97
-98</pre>
+98
+99</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/structured_text.rb', line 95</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/structured_text.rb', line 96</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_text'>text</span><span class='comma'>,</span> <span class='id identifier rubyid_spans'>spans</span><span class='rparen'>)</span>
   <span class='ivar'>@text</span> <span class='op'>=</span> <span class='id identifier rubyid_text'>text</span>
@@ -329,12 +329,12 @@
       <pre class="lines">
 
 
-93
 94
-95</pre>
+95
+96</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/structured_text.rb', line 93</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/structured_text.rb', line 94</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_spans'>spans</span>
   <span class='ivar'>@spans</span>
@@ -372,12 +372,12 @@
       <pre class="lines">
 
 
-93
 94
-95</pre>
+95
+96</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/structured_text.rb', line 93</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/structured_text.rb', line 94</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_text'>text</span>
   <span class='ivar'>@text</span>
@@ -409,7 +409,6 @@
       <pre class="lines">
 
 
-100
 101
 102
 103
@@ -420,10 +419,11 @@
 108
 109
 110
-111</pre>
+111
+112</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/structured_text.rb', line 100</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/structured_text.rb', line 101</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_as_html'>as_html</span><span class='lparen'>(</span><span class='id identifier rubyid_link_resolver'>link_resolver</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_start_spans'>start_spans</span><span class='comma'>,</span> <span class='id identifier rubyid_end_spans'>end_spans</span> <span class='op'>=</span> <span class='id identifier rubyid_prepare_spans'>prepare_spans</span>
@@ -434,7 +434,7 @@
     <span class='id identifier rubyid_closing'>closing</span> <span class='op'>=</span> <span class='id identifier rubyid_end_spans'>end_spans</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_span'>span</span><span class='op'>|</span>
       <span class='id identifier rubyid_span'>span</span><span class='period'>.</span><span class='id identifier rubyid_end_html'>end_html</span><span class='lparen'>(</span><span class='id identifier rubyid_link_resolver'>link_resolver</span><span class='rparen'>)</span>
     <span class='rbrace'>}</span>
-    <span class='id identifier rubyid_opening'>opening</span> <span class='op'>+</span> <span class='id identifier rubyid_closing'>closing</span> <span class='op'>+</span> <span class='lbracket'>[</span><span class='id identifier rubyid_c'>c</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_opening'>opening</span> <span class='op'>+</span> <span class='id identifier rubyid_closing'>closing</span> <span class='op'>+</span> <span class='lbracket'>[</span><span class='const'>CGI</span><span class='op'>::</span><span class='id identifier rubyid_escapeHTML'>escapeHTML</span><span class='lparen'>(</span><span class='id identifier rubyid_c'>c</span><span class='rparen'>)</span><span class='rbracket'>]</span>
   <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_flatten'>flatten</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -457,7 +457,6 @@
       <pre class="lines">
 
 
-113
 114
 115
 116
@@ -469,10 +468,11 @@
 122
 123
 124
-125</pre>
+125
+126</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/structured_text.rb', line 113</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/structured_text.rb', line 114</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_prepare_spans'>prepare_spans</span>
   <span class='kw'>unless</span> <span class='kw'>defined?</span><span class='lparen'>(</span><span class='ivar'>@prepared_spans</span><span class='rparen'>)</span>
@@ -497,9 +497,9 @@
 </div>
 
     <div id="footer">
-  Generated on Sat Oct 12 12:31:24 2013 by
+  Generated on Wed Nov  6 14:20:50 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.2 (ruby-2.0.0).
+  0.8.7.3 (ruby-1.9.3).
 </div>
 
   </body>
