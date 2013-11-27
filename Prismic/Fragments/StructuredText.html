@@ -181,6 +181,30 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#first_title-instance_method" title="#first_title (instance method)">- (Object) <strong>first_title</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Finds the first highest title in a structured text.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#initialize-instance_method" title="#initialize (instance method)">- (StructuredText) <strong>initialize</strong>(blocks) </a>
     
 
@@ -386,12 +410,73 @@
 </table>
 </div>
     
+      <div class="method_details ">
+  <h3 class="signature " id="first_title-instance_method">
+  
+    - (<tt>Object</tt>) <strong>first_title</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Finds the first highest title in a structured text</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/structured_text.rb', line 51</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_first_title'>first_title</span>
+  <span class='id identifier rubyid_max_level'>max_level</span> <span class='op'>=</span> <span class='int'>6</span> <span class='comment'># any title with a higher level kicks the current one out
+</span>  <span class='id identifier rubyid_title'>title</span> <span class='op'>=</span> <span class='kw'>false</span>
+  <span class='ivar'>@blocks</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_block'>block</span><span class='op'>|</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_block'>block</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Prismic</span><span class='op'>::</span><span class='const'>Fragments</span><span class='op'>::</span><span class='const'>StructuredText</span><span class='op'>::</span><span class='const'>Block</span><span class='op'>::</span><span class='const'>Heading</span><span class='rparen'>)</span>
+      <span class='kw'>if</span> <span class='id identifier rubyid_block'>block</span><span class='period'>.</span><span class='id identifier rubyid_level'>level</span> <span class='op'>&lt;</span> <span class='id identifier rubyid_max_level'>max_level</span>
+        <span class='id identifier rubyid_title'>title</span> <span class='op'>=</span> <span class='id identifier rubyid_block'>block</span><span class='period'>.</span><span class='id identifier rubyid_text'>text</span>
+        <span class='id identifier rubyid_max_level'>max_level</span> <span class='op'>=</span> <span class='id identifier rubyid_block'>block</span><span class='period'>.</span><span class='id identifier rubyid_level'>level</span> <span class='comment'># new maximum
+</span>      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_title'>title</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
   </div>
 
 </div>
 
     <div id="footer">
-  Generated on Thu Nov  7 13:51:35 2013 by
+  Generated on Wed Nov 27 10:46:20 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.3 (ruby-1.9.3).
 </div>

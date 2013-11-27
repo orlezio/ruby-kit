@@ -306,6 +306,30 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#first_title-instance_method" title="#first_title (instance method)">- (Object) <strong>first_title</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Finds the first highest title in a document.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#initialize-instance_method" title="#initialize (instance method)">- (Document) <strong>initialize</strong>(id, type, href, tags, slugs, fragments) </a>
     
 
@@ -383,17 +407,17 @@
       <pre class="lines">
 
 
-135
-136
-137
-138
-139
-140
-141
-142</pre>
+196
+197
+198
+199
+200
+201
+202
+203</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 135</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 196</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_href'>href</span><span class='comma'>,</span> <span class='id identifier rubyid_tags'>tags</span><span class='comma'>,</span> <span class='id identifier rubyid_slugs'>slugs</span><span class='comma'>,</span> <span class='id identifier rubyid_fragments'>fragments</span><span class='rparen'>)</span>
   <span class='ivar'>@id</span> <span class='op'>=</span> <span class='id identifier rubyid_id'>id</span>
@@ -441,12 +465,12 @@
       <pre class="lines">
 
 
-133
-134
-135</pre>
+194
+195
+196</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 133</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 194</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fragments'>fragments</span>
   <span class='ivar'>@fragments</span>
@@ -484,12 +508,12 @@
       <pre class="lines">
 
 
-133
-134
-135</pre>
+194
+195
+196</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 133</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 194</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_href'>href</span>
   <span class='ivar'>@href</span>
@@ -527,12 +551,12 @@
       <pre class="lines">
 
 
-133
-134
-135</pre>
+194
+195
+196</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 133</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 194</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_id'>id</span>
   <span class='ivar'>@id</span>
@@ -570,12 +594,12 @@
       <pre class="lines">
 
 
-133
-134
-135</pre>
+194
+195
+196</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 133</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 194</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_slugs'>slugs</span>
   <span class='ivar'>@slugs</span>
@@ -613,12 +637,12 @@
       <pre class="lines">
 
 
-133
-134
-135</pre>
+194
+195
+196</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 133</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 194</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_tags'>tags</span>
   <span class='ivar'>@tags</span>
@@ -656,12 +680,12 @@
       <pre class="lines">
 
 
-133
-134
-135</pre>
+194
+195
+196</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 133</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 194</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_type'>type</span>
   <span class='ivar'>@type</span>
@@ -693,19 +717,91 @@
       <pre class="lines">
 
 
-148
-149
-150
-151
-152</pre>
+209
+210
+211
+212
+213</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 148</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 209</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_as_html'>as_html</span><span class='lparen'>(</span><span class='id identifier rubyid_link_resolver'>link_resolver</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_fragments'>fragments</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_field'>field</span><span class='comma'>,</span> <span class='id identifier rubyid_fragment'>fragment</span><span class='op'>|</span>
     <span class='tstring'><span class='tstring_beg'>%(</span><span class='tstring_content'>&lt;section data-field=&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_field'>field</span><span class='rbrace'>}</span><span class='tstring_content'>&quot;&gt;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_fragment'>fragment</span><span class='period'>.</span><span class='id identifier rubyid_as_html'>as_html</span><span class='lparen'>(</span><span class='id identifier rubyid_link_resolver'>link_resolver</span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='tstring_content'>&lt;/section&gt;</span><span class='tstring_end'>)</span></span>
   <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="first_title-instance_method">
+  
+    - (<tt>Object</tt>) <strong>first_title</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Finds the first highest title in a document</p>
+
+<p>It is impossible to reuse the StructuredText.first_title method, since we
+need to test the highest title across the whole document</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 218</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_first_title'>first_title</span>
+  <span class='id identifier rubyid_title'>title</span> <span class='op'>=</span> <span class='kw'>false</span>
+  <span class='id identifier rubyid_max_level'>max_level</span> <span class='op'>=</span> <span class='int'>6</span> <span class='comment'># any title with a higher level kicks the current one out
+</span>  <span class='ivar'>@fragments</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid__'>_</span><span class='comma'>,</span> <span class='id identifier rubyid_fragment'>fragment</span><span class='op'>|</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_fragment'>fragment</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span> <span class='const'>Prismic</span><span class='op'>::</span><span class='const'>Fragments</span><span class='op'>::</span><span class='const'>StructuredText</span>
+      <span class='id identifier rubyid_fragment'>fragment</span><span class='period'>.</span><span class='id identifier rubyid_blocks'>blocks</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_block'>block</span><span class='op'>|</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_block'>block</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Prismic</span><span class='op'>::</span><span class='const'>Fragments</span><span class='op'>::</span><span class='const'>StructuredText</span><span class='op'>::</span><span class='const'>Block</span><span class='op'>::</span><span class='const'>Heading</span><span class='rparen'>)</span>
+          <span class='kw'>if</span> <span class='id identifier rubyid_block'>block</span><span class='period'>.</span><span class='id identifier rubyid_level'>level</span> <span class='op'>&lt;</span> <span class='id identifier rubyid_max_level'>max_level</span>
+            <span class='id identifier rubyid_title'>title</span> <span class='op'>=</span> <span class='id identifier rubyid_block'>block</span><span class='period'>.</span><span class='id identifier rubyid_text'>text</span>
+            <span class='id identifier rubyid_max_level'>max_level</span> <span class='op'>=</span> <span class='id identifier rubyid_block'>block</span><span class='period'>.</span><span class='id identifier rubyid_level'>level</span> <span class='comment'># new maximum
+</span>          <span class='kw'>end</span>
+        <span class='kw'>end</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_title'>title</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -727,12 +823,12 @@
       <pre class="lines">
 
 
-144
-145
-146</pre>
+205
+206
+207</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 144</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 205</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_slug'>slug</span>
   <span class='id identifier rubyid_slugs'>slugs</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>-</span><span class='tstring_end'>'</span></span> <span class='op'>:</span> <span class='id identifier rubyid_slugs'>slugs</span><span class='period'>.</span><span class='id identifier rubyid_first'>first</span>
@@ -747,7 +843,7 @@
 </div>
 
     <div id="footer">
-  Generated on Thu Nov  7 13:51:34 2013 by
+  Generated on Wed Nov 27 10:46:19 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.3 (ruby-1.9.3).
 </div>
