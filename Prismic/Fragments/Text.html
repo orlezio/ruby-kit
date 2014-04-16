@@ -6,7 +6,7 @@
 <title>
   Class: Prismic::Fragments::Text
   
-    &mdash; Documentation by YARD 0.8.7.3
+    &mdash; Documentation by YARD 0.8.7.4
   
 </title>
 
@@ -17,7 +17,7 @@
 <script type="text/javascript" charset="utf-8">
   hasFrames = window.top.frames.main ? true : false;
   relpath = '../../';
-  framesUrl = "../../frames.html#!" + escape(window.location.href);
+  framesUrl = "../../frames.html#!Prismic/Fragments/Text.html";
 </script>
 
 
@@ -73,10 +73,12 @@
   
     <dt class="r1">Inherits:</dt>
     <dd class="r1">
-      <span class="inheritName">Object</span>
+      <span class="inheritName"><span class='object_link'><a href="Fragment.html" title="Prismic::Fragments::Fragment (class)">Fragment</a></span></span>
       
         <ul class="fullTree">
           <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="Fragment.html" title="Prismic::Fragments::Fragment (class)">Fragment</a></span></li>
           
             <li class="next">Prismic::Fragments::Text</li>
           
@@ -171,6 +173,28 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#as_text-instance_method" title="#as_text (instance method)">- (Object) <strong>as_text</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#initialize-instance_method" title="#initialize (instance method)">- (Text) <strong>initialize</strong>(value) </a>
     
 
@@ -197,7 +221,13 @@
     </ul>
   
 
-<div id="constructor_details" class="method_details_list">
+
+  
+  
+  
+  
+  
+  <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
     <div class="method_details first">
@@ -319,7 +349,37 @@
       <pre class="code"><span class="info file"># File 'lib/prismic/fragments/text.rb', line 11</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_as_html'>as_html</span><span class='lparen'>(</span><span class='id identifier rubyid_link_resolver'>link_resolver</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
-  <span class='tstring'><span class='tstring_beg'>%(</span><span class='tstring_content'>&lt;span class=&quot;text&quot;&gt;</span><span class='embexpr_beg'>#{</span><span class='const'>CGI</span><span class='op'>::</span><span class='id identifier rubyid_escapeHTML'>escapeHTML</span><span class='lparen'>(</span><span class='ivar'>@value</span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='tstring_content'>&lt;/span&gt;</span><span class='tstring_end'>)</span></span>
+  <span class='tstring'><span class='tstring_beg'>%(</span><span class='tstring_content'>&lt;span class=&quot;text&quot;&gt;</span><span class='embexpr_beg'>#{</span><span class='const'>CGI</span><span class='op'>::</span><span class='id identifier rubyid_escapeHTML'>escapeHTML</span><span class='lparen'>(</span><span class='ivar'>@value</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>&lt;/span&gt;</span><span class='tstring_end'>)</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="as_text-instance_method">
+  
+    - (<tt>Object</tt>) <strong>as_text</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+15
+16
+17</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/text.rb', line 15</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_as_text'>as_text</span>
+  <span class='ivar'>@value</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -331,9 +391,9 @@
 </div>
 
     <div id="footer">
-  Generated on Wed Nov 27 10:46:19 2013 by
+  Generated on Wed Apr 16 16:34:41 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.3 (ruby-1.9.3).
+  0.8.7.4 (ruby-2.1.1).
 </div>
 
   </body>

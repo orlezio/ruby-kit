@@ -6,7 +6,7 @@
 <title>
   Class: Prismic::Fragments::StructuredText::Block
   
-    &mdash; Documentation by YARD 0.8.7.3
+    &mdash; Documentation by YARD 0.8.7.4
   
 </title>
 
@@ -17,7 +17,7 @@
 <script type="text/javascript" charset="utf-8">
   hasFrames = window.top.frames.main ? true : false;
   relpath = '../../../';
-  framesUrl = "../../../frames.html#!" + escape(window.location.href);
+  framesUrl = "../../../frames.html#!Prismic/Fragments/StructuredText/Block.html";
 </script>
 
 
@@ -120,14 +120,116 @@
 
 
 
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
 
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#as_text-instance_method" title="#as_text (instance method)">- (Object) <strong>as_text</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns nil, as a block is not textual by default.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="as_text-instance_method">
+  
+    - (<tt>Object</tt>) <strong>as_text</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns nil, as a block is not textual by default. This is meant to be
+overriden by textual blocks (see
+Prismic::Fragments::StructuredText::Block::Text.as_text, for instance)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>nil, always.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+138
+139
+140</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/structured_text.rb', line 138</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_as_text'>as_text</span>
+  <span class='kw'>nil</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
 
 </div>
 
     <div id="footer">
-  Generated on Wed Nov 27 10:46:20 2013 by
+  Generated on Wed Apr 16 16:34:42 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.3 (ruby-1.9.3).
+  0.8.7.4 (ruby-2.1.1).
 </div>
 
   </body>

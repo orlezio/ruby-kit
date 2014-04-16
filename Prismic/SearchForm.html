@@ -6,7 +6,7 @@
 <title>
   Class: Prismic::SearchForm
   
-    &mdash; Documentation by YARD 0.8.7.3
+    &mdash; Documentation by YARD 0.8.7.4
   
 </title>
 
@@ -17,7 +17,7 @@
 <script type="text/javascript" charset="utf-8">
   hasFrames = window.top.frames.main ? true : false;
   relpath = '../';
-  framesUrl = "../frames.html#!" + escape(window.location.href);
+  framesUrl = "../frames.html#!Prismic/SearchForm.html";
 </script>
 
 
@@ -104,16 +104,39 @@
     
 <p>A SearchForm represent a Form returned by the prismic.io API.</p>
 
-<p>These forms depend on the prismic.io repository, and can be fill and send
-in the same way than regular HTML forms.</p>
+<p>These forms depend on the prismic.io repository, and can be filled and sent
+as regular HTML forms.</p>
 
-<p>Get SearchForm instance through the <span class='object_link'><a href="API.html#create_search_form-instance_method" title="Prismic::API#create_search_form (method)">API#create_search_form</a></span> method.</p>
+<p>You may get a SearchForm instance through the <span class='object_link'><a href="API.html#form-instance_method" title="Prismic::API#form (method)">API#form</a></span> method.</p>
+
+<p>The SearchForm instance contains helper methods for each predefined
+form&#39;s fields. Note that these methods are not created if they risk to
+add confusion:</p>
+<ul><li>
+<p>only letters, underscore and digits are authorized in the name</p>
+</li><li>
+<p>name starting with a digit or an underscore are forbidden</p>
+</li><li>
+<p>generated method can&#39;t override existing methods</p>
+</li></ul>
 
 
   </div>
 </div>
 <div class="tags">
   
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_search_form'>search_form</span> <span class='op'>=</span> <span class='id identifier rubyid_api'>api</span><span class='period'>.</span><span class='id identifier rubyid_form'>form</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>everything</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_search_form'>search_form</span><span class='period'>.</span><span class='id identifier rubyid_page'>page</span><span class='lparen'>(</span><span class='int'>3</span><span class='rparen'>)</span>  <span class='comment'># specify the field &#39;page&#39;
+</span><span class='id identifier rubyid_search_form'>search_form</span><span class='period'>.</span><span class='id identifier rubyid_page_size'>page_size</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>20</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>  <span class='comment'># specify the &#39;page_size&#39; field
+</span><span class='id identifier rubyid_results'>results</span> <span class='op'>=</span> <span class='id identifier rubyid_search_form'>search_form</span><span class='period'>.</span><span class='id identifier rubyid_submit'>submit</span><span class='lparen'>(</span><span class='id identifier rubyid_master_ref'>master_ref</span><span class='rparen'>)</span>  <span class='comment'># submit the search form
+</span><span class='id identifier rubyid_results'>results</span> <span class='op'>=</span> <span class='id identifier rubyid_api'>api</span><span class='period'>.</span><span class='id identifier rubyid_form'>form</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>everything</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_page'>page</span><span class='lparen'>(</span><span class='int'>3</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_page_size'>page_size</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>20</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_submit'>submit</span><span class='lparen'>(</span><span class='id identifier rubyid_master_ref'>master_ref</span><span class='rparen'>)</span> <span class='comment'># methods can be chained</span></code></pre>
+    
+  </div>
+
 
 </div><h2>Defined Under Namespace</h2>
 <p class="children">
@@ -256,7 +279,7 @@ in the same way than regular HTML forms.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#action-instance_method" title="#action (instance method)">- (Object) <strong>action</strong> </a>
+      <a href="#form_action-instance_method" title="#form_action (instance method)">- (Object) <strong>form_action</strong> </a>
     
 
     
@@ -278,7 +301,7 @@ in the same way than regular HTML forms.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#enctype-instance_method" title="#enctype (instance method)">- (Object) <strong>enctype</strong> </a>
+      <a href="#form_enctype-instance_method" title="#form_enctype (instance method)">- (Object) <strong>form_enctype</strong> </a>
     
 
     
@@ -300,7 +323,7 @@ in the same way than regular HTML forms.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#fields-instance_method" title="#fields (instance method)">- (Object) <strong>fields</strong> </a>
+      <a href="#form_fields-instance_method" title="#form_fields (instance method)">- (Object) <strong>form_fields</strong> </a>
     
 
     
@@ -323,6 +346,50 @@ in the same way than regular HTML forms.</p>
   <span class="summary_signature">
     
       <a href="#form_method-instance_method" title="#form_method (instance method)">- (Object) <strong>form_method</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#form_name-instance_method" title="#form_name (instance method)">- (Object) <strong>form_name</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#form_rel-instance_method" title="#form_rel (instance method)">- (Object) <strong>form_rel</strong> </a>
     
 
     
@@ -370,7 +437,7 @@ in the same way than regular HTML forms.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#name-instance_method" title="#name (instance method)">- (Object) <strong>name</strong> </a>
+      <a href="#orderings-instance_method" title="#orderings (instance method)">- (SearchForm) <strong>orderings</strong>(orderings) </a>
     
 
     
@@ -384,7 +451,57 @@ in the same way than regular HTML forms.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Specify a orderings for this form.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#page-instance_method" title="#page (instance method)">- (SearchForm) <strong>page</strong>(page) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Specify a page for this form.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#page_size-instance_method" title="#page_size (instance method)">- (SearchForm) <strong>page_size</strong>(page_size) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Specify a page size for this form.</p>
+</div></span>
   
 </li>
 
@@ -416,28 +533,6 @@ in the same way than regular HTML forms.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#rel-instance_method" title="#rel (instance method)">- (Object) <strong>rel</strong> </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
       <a href="#set-instance_method" title="#set (instance method)">- (SearchForm) <strong>set</strong>(field_name, value) </a>
     
 
@@ -462,7 +557,7 @@ in the same way than regular HTML forms.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#submit-instance_method" title="#submit (instance method)">- (type) <strong>submit</strong>(ref = nil) </a>
+      <a href="#submit-instance_method" title="#submit (instance method)">- (Documents) <strong>submit</strong>(ref = nil) </a>
     
 
     
@@ -515,22 +610,24 @@ in the same way than regular HTML forms.</p>
       <pre class="lines">
 
 
-69
-70
-71
-72
-73
-74
-75
-76</pre>
+98
+99
+100
+101
+102
+103
+104
+105
+106</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 69</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 98</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_api'>api</span><span class='comma'>,</span> <span class='id identifier rubyid_form'>form</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_ref'>ref</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='ivar'>@api</span> <span class='op'>=</span> <span class='id identifier rubyid_api'>api</span>
   <span class='ivar'>@form</span> <span class='op'>=</span> <span class='id identifier rubyid_form'>form</span>
   <span class='ivar'>@data</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+  <span class='id identifier rubyid_form'>form</span><span class='period'>.</span><span class='id identifier rubyid_fields'>fields</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid__'>_</span><span class='op'>|</span> <span class='id identifier rubyid_create_field_helper_method'>create_field_helper_method</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
   <span class='id identifier rubyid_form'>form</span><span class='period'>.</span><span class='id identifier rubyid_default_data'>default_data</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='op'>|</span> <span class='id identifier rubyid_set'>set</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
   <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='op'>|</span> <span class='id identifier rubyid_set'>set</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
   <span class='ivar'>@ref</span> <span class='op'>=</span> <span class='id identifier rubyid_ref'>ref</span>
@@ -573,12 +670,12 @@ in the same way than regular HTML forms.</p>
       <pre class="lines">
 
 
-67
-68
-69</pre>
+96
+97
+98</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 67</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 96</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_api'>api</span>
   <span class='ivar'>@api</span>
@@ -616,12 +713,12 @@ in the same way than regular HTML forms.</p>
       <pre class="lines">
 
 
-67
-68
-69</pre>
+96
+97
+98</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 67</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 96</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_data'>data</span>
   <span class='ivar'>@data</span>
@@ -659,12 +756,12 @@ in the same way than regular HTML forms.</p>
       <pre class="lines">
 
 
-67
-68
-69</pre>
+96
+97
+98</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 67</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 96</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_form'>form</span>
   <span class='ivar'>@form</span>
@@ -740,12 +837,12 @@ in the same way than regular HTML forms.</p>
       <pre class="lines">
 
 
-168
-169
-170</pre>
+229
+230
+231</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 168</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 229</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_ref'>ref</span>
   <span class='ivar'>@ref</span>
@@ -763,9 +860,9 @@ in the same way than regular HTML forms.</p>
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="action-instance_method">
+  <h3 class="signature first" id="form_action-instance_method">
   
-    - (<tt>Object</tt>) <strong>action</strong> 
+    - (<tt>Object</tt>) <strong>form_action</strong> 
   
 
   
@@ -777,14 +874,14 @@ in the same way than regular HTML forms.</p>
       <pre class="lines">
 
 
-94
-95
-96</pre>
+159
+160
+161</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 94</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 159</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_action'>action</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_form_action'>form_action</span>
   <span class='id identifier rubyid_form'>form</span><span class='period'>.</span><span class='id identifier rubyid_action'>action</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -793,9 +890,9 @@ in the same way than regular HTML forms.</p>
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="enctype-instance_method">
+  <h3 class="signature " id="form_enctype-instance_method">
   
-    - (<tt>Object</tt>) <strong>enctype</strong> 
+    - (<tt>Object</tt>) <strong>form_enctype</strong> 
   
 
   
@@ -807,14 +904,14 @@ in the same way than regular HTML forms.</p>
       <pre class="lines">
 
 
-90
-91
-92</pre>
+155
+156
+157</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 90</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 155</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_enctype'>enctype</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_form_enctype'>form_enctype</span>
   <span class='id identifier rubyid_form'>form</span><span class='period'>.</span><span class='id identifier rubyid_enctype'>enctype</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -823,9 +920,9 @@ in the same way than regular HTML forms.</p>
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="fields-instance_method">
+  <h3 class="signature " id="form_fields-instance_method">
   
-    - (<tt>Object</tt>) <strong>fields</strong> 
+    - (<tt>Object</tt>) <strong>form_fields</strong> 
   
 
   
@@ -837,14 +934,14 @@ in the same way than regular HTML forms.</p>
       <pre class="lines">
 
 
-98
-99
-100</pre>
+163
+164
+165</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 98</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 163</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_fields'>fields</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_form_fields'>form_fields</span>
   <span class='id identifier rubyid_form'>form</span><span class='period'>.</span><span class='id identifier rubyid_fields'>fields</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -867,12 +964,12 @@ in the same way than regular HTML forms.</p>
       <pre class="lines">
 
 
-82
-83
-84</pre>
+147
+148
+149</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 82</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 147</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_form_method'>form_method</span>
   <span class='id identifier rubyid_form'>form</span><span class='period'>.</span><span class='id identifier rubyid_form_method'>form_method</span>
@@ -883,9 +980,9 @@ in the same way than regular HTML forms.</p>
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="name-instance_method">
+  <h3 class="signature " id="form_name-instance_method">
   
-    - (<tt>Object</tt>) <strong>name</strong> 
+    - (<tt>Object</tt>) <strong>form_name</strong> 
   
 
   
@@ -897,16 +994,271 @@ in the same way than regular HTML forms.</p>
       <pre class="lines">
 
 
-78
-79
-80</pre>
+143
+144
+145</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 78</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 143</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_name'>name</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_form_name'>form_name</span>
   <span class='id identifier rubyid_form'>form</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span>
 <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="form_rel-instance_method">
+  
+    - (<tt>Object</tt>) <strong>form_rel</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+151
+152
+153</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 151</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_form_rel'>form_rel</span>
+  <span class='id identifier rubyid_form'>form</span><span class='period'>.</span><span class='id identifier rubyid_rel'>rel</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="orderings-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Prismic::SearchForm (class)">SearchForm</a></span></tt>) <strong>orderings</strong>(orderings) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Specify a orderings for this form.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>orderings</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The orderings</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Prismic::SearchForm (class)">SearchForm</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>self</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 113</span>
+
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="page-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Prismic::SearchForm (class)">SearchForm</a></span></tt>) <strong>page</strong>(page) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Specify a page for this form.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>page</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Fixum</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The page</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Prismic::SearchForm (class)">SearchForm</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>self</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 118</span>
+
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="page_size-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Prismic::SearchForm (class)">SearchForm</a></span></tt>) <strong>page_size</strong>(page_size) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Specify a page size for this form.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>page_size</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Fixum</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The page size</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Prismic::SearchForm (class)">SearchForm</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>self</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 123</span>
+
+</pre>
     </td>
   </tr>
 </table>
@@ -924,7 +1276,7 @@ in the same way than regular HTML forms.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Specify a query for this form</p>
+<p>Specify a query for this form.</p>
 
 
   </div>
@@ -976,46 +1328,12 @@ in the same way than regular HTML forms.</p>
       <pre class="lines">
 
 
-143
-144
-145</pre>
+</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 143</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 108</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_query'>query</span><span class='lparen'>(</span><span class='id identifier rubyid_query'>query</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_set'>set</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>q</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='id identifier rubyid_query'>query</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="rel-instance_method">
-  
-    - (<tt>Object</tt>) <strong>rel</strong> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-86
-87
-88</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 86</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_rel'>rel</span>
-  <span class='id identifier rubyid_form'>form</span><span class='period'>.</span><span class='id identifier rubyid_rel'>rel</span>
-<span class='kw'>end</span></pre>
+</pre>
     </td>
   </tr>
 </table>
@@ -1053,7 +1371,7 @@ in the same way than regular HTML forms.</p>
       
         &mdash;
         <div class='inline'>
-<p>The parameter’s name</p>
+<p>The parameter&#39;s name</p>
 </div>
       
     </li>
@@ -1069,7 +1387,7 @@ in the same way than regular HTML forms.</p>
       
         &mdash;
         <div class='inline'>
-<p>The parameter’s value</p>
+<p>The parameter&#39;s value</p>
 </div>
       
     </li>
@@ -1101,19 +1419,19 @@ in the same way than regular HTML forms.</p>
       <pre class="lines">
 
 
-152
-153
-154
-155
-156
-157
-158
-159
-160
-161</pre>
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 152</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 213</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_set'>set</span><span class='lparen'>(</span><span class='id identifier rubyid_field_name'>field_name</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_field'>field</span> <span class='op'>=</span> <span class='ivar'>@form</span><span class='period'>.</span><span class='id identifier rubyid_fields'>fields</span><span class='lbracket'>[</span><span class='id identifier rubyid_field_name'>field_name</span><span class='rbracket'>]</span>
@@ -1133,7 +1451,7 @@ in the same way than regular HTML forms.</p>
       <div class="method_details ">
   <h3 class="signature " id="submit-instance_method">
   
-    - (<tt>type</tt>) <strong>submit</strong>(ref = nil) 
+    - (<tt><span class='object_link'><a href="Documents.html" title="Prismic::Documents (class)">Documents</a></span></tt>) <strong>submit</strong>(ref = nil) 
   
 
   
@@ -1187,13 +1505,13 @@ providing the ref parameter.</p>
     <li>
       
       
-        <span class='type'>(<tt>type</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Documents.html" title="Prismic::Documents (class)">Documents</a></span></tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><dl class="rdoc-list"><dt>description</dt>
-<dd></dd></dl>
+        <div class='inline'>
+<p>The results (array of Document object + pagination specifics)</p>
 </div>
       
     </li>
@@ -1219,59 +1537,69 @@ providing the ref parameter.</p>
       <pre class="lines">
 
 
-112
-113
-114
-115
-116
-117
-118
-119
-120
-121
-122
-123
-124
-125
-126
-127
-128
-129
-130
-131
-132
-133
-134
-135
-136</pre>
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 112</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 177</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_submit'>submit</span><span class='lparen'>(</span><span class='id identifier rubyid_ref'>ref</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_ref'>ref</span><span class='lparen'>(</span><span class='id identifier rubyid_ref'>ref</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_ref'>ref</span>
   <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NoRefSetException</span> <span class='kw'>unless</span> <span class='ivar'>@ref</span>
 
-  <span class='kw'>if</span> <span class='id identifier rubyid_form_method'>form_method</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>GET</span><span class='tstring_end'>&quot;</span></span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_enctype'>enctype</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>application/x-www-form-urlencoded</span><span class='tstring_end'>&quot;</span></span>
-    <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ref</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='ivar'>@ref</span>
-    <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>access_token</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_api'>api</span><span class='period'>.</span><span class='id identifier rubyid_access_token'>access_token</span> <span class='kw'>if</span> <span class='id identifier rubyid_api'>api</span><span class='period'>.</span><span class='id identifier rubyid_access_token'>access_token</span>
-    <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_delete_if'>delete_if</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span><span class='op'>|</span> <span class='id identifier rubyid_v'>v</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='rbrace'>}</span>
+  <span class='comment'># cache_key is a mix of HTTP URL and HTTP method
+</span>  <span class='id identifier rubyid_cache_key'>cache_key</span> <span class='op'>=</span> <span class='id identifier rubyid_form_method'>form_method</span><span class='op'>+</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>::</span><span class='tstring_end'>&#39;</span></span><span class='op'>+</span><span class='id identifier rubyid_form_action'>form_action</span><span class='op'>+</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>?</span><span class='tstring_end'>&#39;</span></span><span class='op'>+</span><span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span><span class='id identifier rubyid_v'>v</span><span class='op'>|</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_k'>k</span><span class='embexpr_end'>}</span><span class='tstring_content'>=</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_v'>v</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>&amp;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
 
-    <span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='id identifier rubyid_api'>api</span><span class='period'>.</span><span class='id identifier rubyid_http_client'>http_client</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_action'>action</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Accept</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>application/json</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_api'>api</span><span class='period'>.</span><span class='id identifier rubyid_caching'>caching</span><span class='lparen'>(</span><span class='id identifier rubyid_cache_key'>cache_key</span><span class='rparen'>)</span> <span class='lbrace'>{</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_form_method'>form_method</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>GET</span><span class='tstring_end'>&quot;</span></span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_form_enctype'>form_enctype</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>application/x-www-form-urlencoded</span><span class='tstring_end'>&quot;</span></span>
+      <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ref</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='ivar'>@ref</span>
+      <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>access_token</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_api'>api</span><span class='period'>.</span><span class='id identifier rubyid_access_token'>access_token</span> <span class='kw'>if</span> <span class='id identifier rubyid_api'>api</span><span class='period'>.</span><span class='id identifier rubyid_access_token'>access_token</span>
+      <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_delete_if'>delete_if</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span><span class='op'>|</span> <span class='id identifier rubyid_v'>v</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='rbrace'>}</span>
 
-    <span class='kw'>if</span> <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_code'>code</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>200</span><span class='tstring_end'>&quot;</span></span>
-      <span class='const'>Prismic</span><span class='op'>::</span><span class='const'>JsonParser</span><span class='period'>.</span><span class='id identifier rubyid_results_parser'>results_parser</span><span class='lparen'>(</span><span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='rparen'>)</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='id identifier rubyid_api'>api</span><span class='period'>.</span><span class='id identifier rubyid_http_client'>http_client</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_form_action'>form_action</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Accept</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>application/json</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+
+      <span class='kw'>if</span> <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_code'>code</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>200</span><span class='tstring_end'>&quot;</span></span>
+        <span class='const'>Prismic</span><span class='op'>::</span><span class='const'>JsonParser</span><span class='period'>.</span><span class='id identifier rubyid_documents_parser'>documents_parser</span><span class='lparen'>(</span><span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='rparen'>)</span><span class='rparen'>)</span>
+      <span class='kw'>else</span>
+        <span class='id identifier rubyid_body'>body</span> <span class='op'>=</span> <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='rparen'>)</span> <span class='kw'>rescue</span> <span class='kw'>nil</span>
+        <span class='id identifier rubyid_error'>error</span> <span class='op'>=</span> <span class='id identifier rubyid_body'>body</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Hash</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='id identifier rubyid_body'>body</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>error</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>:</span> <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span>
+        <span class='id identifier rubyid_raise'>raise</span> <span class='const'>AuthenticationException</span><span class='comma'>,</span> <span class='id identifier rubyid_error'>error</span> <span class='kw'>if</span> <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_code'>code</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>401</span><span class='tstring_end'>&quot;</span></span>
+        <span class='id identifier rubyid_raise'>raise</span> <span class='const'>AuthorizationException</span><span class='comma'>,</span> <span class='id identifier rubyid_error'>error</span> <span class='kw'>if</span> <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_code'>code</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>403</span><span class='tstring_end'>&quot;</span></span>
+        <span class='id identifier rubyid_raise'>raise</span> <span class='const'>RefNotFoundException</span><span class='comma'>,</span> <span class='id identifier rubyid_error'>error</span> <span class='kw'>if</span> <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_code'>code</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>404</span><span class='tstring_end'>&quot;</span></span>
+        <span class='id identifier rubyid_raise'>raise</span> <span class='const'>FormSearchException</span><span class='comma'>,</span> <span class='id identifier rubyid_error'>error</span>
+      <span class='kw'>end</span>
     <span class='kw'>else</span>
-      <span class='id identifier rubyid_body'>body</span> <span class='op'>=</span> <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='rparen'>)</span> <span class='kw'>rescue</span> <span class='kw'>nil</span>
-      <span class='id identifier rubyid_error'>error</span> <span class='op'>=</span> <span class='id identifier rubyid_body'>body</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Hash</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='id identifier rubyid_body'>body</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>error</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>:</span> <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span>
-      <span class='id identifier rubyid_raise'>raise</span> <span class='const'>AuthenticationException</span><span class='comma'>,</span> <span class='id identifier rubyid_error'>error</span> <span class='kw'>if</span> <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_code'>code</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>401</span><span class='tstring_end'>&quot;</span></span>
-      <span class='id identifier rubyid_raise'>raise</span> <span class='const'>AuthorizationException</span><span class='comma'>,</span> <span class='id identifier rubyid_error'>error</span> <span class='kw'>if</span> <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_code'>code</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>403</span><span class='tstring_end'>&quot;</span></span>
-      <span class='id identifier rubyid_raise'>raise</span> <span class='const'>RefNotFoundException</span><span class='comma'>,</span> <span class='id identifier rubyid_error'>error</span> <span class='kw'>if</span> <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_code'>code</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>404</span><span class='tstring_end'>&quot;</span></span>
-      <span class='id identifier rubyid_raise'>raise</span> <span class='const'>FormSearchException</span><span class='comma'>,</span> <span class='id identifier rubyid_error'>error</span>
+      <span class='id identifier rubyid_raise'>raise</span> <span class='const'>UnsupportedFormKind</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Unsupported kind of form: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_form_method'>form_method</span><span class='embexpr_end'>}</span><span class='tstring_content'> / </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_enctype'>enctype</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
     <span class='kw'>end</span>
-  <span class='kw'>else</span>
-    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>UnsupportedFormKind</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Unsupported kind of form: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_form_method'>form_method</span><span class='rbrace'>}</span><span class='tstring_content'> / </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_enctype'>enctype</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
-  <span class='kw'>end</span>
+  <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1283,9 +1611,9 @@ providing the ref parameter.</p>
 </div>
 
     <div id="footer">
-  Generated on Wed Nov 27 10:46:19 2013 by
+  Generated on Wed Apr 16 16:34:40 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.3 (ruby-1.9.3).
+  0.8.7.4 (ruby-2.1.1).
 </div>
 
   </body>

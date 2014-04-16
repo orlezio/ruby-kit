@@ -4,9 +4,9 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>
-  Class: Prismic::Fragments::MediaLink
+  Class: Prismic::Fragments::ImageLink
   
-    &mdash; Documentation by YARD 0.8.7.3
+    &mdash; Documentation by YARD 0.8.7.4
   
 </title>
 
@@ -17,7 +17,7 @@
 <script type="text/javascript" charset="utf-8">
   hasFrames = window.top.frames.main ? true : false;
   relpath = '../../';
-  framesUrl = "../../frames.html#!" + escape(window.location.href);
+  framesUrl = "../../frames.html#!Prismic/Fragments/ImageLink.html";
 </script>
 
 
@@ -31,10 +31,10 @@
     <div id="header">
       <div id="menu">
   
-    <a href="../../_index.html">Index (M)</a> &raquo;
+    <a href="../../_index.html">Index (I)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../../Prismic.html" title="Prismic (module)">Prismic</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Fragments.html" title="Prismic::Fragments (module)">Fragments</a></span></span>
      &raquo; 
-    <span class="title">MediaLink</span>
+    <span class="title">ImageLink</span>
   
 
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
@@ -63,7 +63,7 @@
 
     <iframe id="search_frame"></iframe>
 
-    <div id="content"><h1>Class: Prismic::Fragments::MediaLink
+    <div id="content"><h1>Class: Prismic::Fragments::ImageLink
   
   
   
@@ -78,9 +78,11 @@
         <ul class="fullTree">
           <li>Object</li>
           
+            <li class="next"><span class='object_link'><a href="Fragment.html" title="Prismic::Fragments::Fragment (class)">Fragment</a></span></li>
+          
             <li class="next"><span class='object_link'><a href="Link.html" title="Prismic::Fragments::Link (class)">Link</a></span></li>
           
-            <li class="next">Prismic::Fragments::MediaLink</li>
+            <li class="next">Prismic::Fragments::ImageLink</li>
           
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
@@ -111,7 +113,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#url-instance_method" title="#url (instance method)">- (Object) <strong>url</strong> </a>
+      <a href="#url-instance_method" title="#url (instance method)">- (Object) <strong>url</strong>(link_resolver = nil) </a>
     
 
     
@@ -129,7 +131,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute url.</p>
+<p>Returns the URL of the link.</p>
 </div></span>
   
 </li>
@@ -151,7 +153,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">- (MediaLink) <strong>initialize</strong>(url) </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (ImageLink) <strong>initialize</strong>(url) </a>
     
 
     
@@ -168,7 +170,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>A new instance of MediaLink.</p>
+<p>A new instance of ImageLink.</p>
 </div></span>
   
 </li>
@@ -187,14 +189,25 @@
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="Link.html" title="Prismic::Fragments::Link (class)">Link</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Link.html#as_html-instance_method" title="Prismic::Fragments::Link#as_html (method)">#as_html</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="Link.html#as_html-instance_method" title="Prismic::Fragments::Link#as_html (method)">#as_html</a></span>, <span class='object_link'><a href="Link.html#end_html-instance_method" title="Prismic::Fragments::Link#end_html (method)">#end_html</a></span>, <span class='object_link'><a href="Link.html#start_html-instance_method" title="Prismic::Fragments::Link#start_html (method)">#start_html</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="Fragment.html" title="Prismic::Fragments::Fragment (class)">Fragment</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Fragment.html#as_html-instance_method" title="Prismic::Fragments::Fragment#as_html (method)">#as_html</a></span>, <span class='object_link'><a href="Fragment.html#as_text-instance_method" title="Prismic::Fragments::Fragment#as_text (method)">#as_text</a></span></p>
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    - (<tt><span class='object_link'><a href="" title="Prismic::Fragments::MediaLink (class)">MediaLink</a></span></tt>) <strong>initialize</strong>(url) 
+    - (<tt><span class='object_link'><a href="" title="Prismic::Fragments::ImageLink (class)">ImageLink</a></span></tt>) <strong>initialize</strong>(url) 
   
 
   
@@ -203,7 +216,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns a new instance of MediaLink</p>
+<p>Returns a new instance of ImageLink</p>
 
 
   </div>
@@ -217,12 +230,12 @@
       <pre class="lines">
 
 
-21
-22
-23</pre>
+80
+81
+82</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/link.rb', line 21</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/link.rb', line 80</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_url'>url</span><span class='rparen'>)</span>
   <span class='ivar'>@url</span> <span class='op'>=</span> <span class='id identifier rubyid_url'>url</span>
@@ -242,7 +255,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="url-instance_method">
   
-    - (<tt>Object</tt>) <strong>url</strong> 
+    - (<tt>Object</tt>) <strong>url</strong>(link_resolver = nil) 
   
 
   
@@ -251,13 +264,46 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the value of attribute url</p>
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>The link_resolver parameter is accepted but it is not used by this method,
+so not providing it is perfectly fine.</p>
+</div>
+  </div>
+
+
+<p>Returns the URL of the link</p>
 
 
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>link_resolver</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../LinkResolver.html" title="Prismic::LinkResolver (class)">LinkResolver</a></span></tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="Link.html#url-instance_method" title="Prismic::Fragments::Link#url (method)">Link#url</a></span></li>
+    
+  </ul>
 
 </div><table class="source_code">
   <tr>
@@ -265,12 +311,12 @@
       <pre class="lines">
 
 
-19
-20
-21</pre>
+92
+93
+94</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/link.rb', line 19</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/link.rb', line 92</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_url'>url</span>
   <span class='ivar'>@url</span>
@@ -286,9 +332,9 @@
 </div>
 
     <div id="footer">
-  Generated on Wed Nov 27 10:46:19 2013 by
+  Generated on Wed Apr 16 16:34:41 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.3 (ruby-1.9.3).
+  0.8.7.4 (ruby-2.1.1).
 </div>
 
   </body>
