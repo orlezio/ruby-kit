@@ -128,8 +128,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute embed_type.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute embed_type.</p>
 </div></span>
   
 </li>
@@ -155,8 +154,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute html.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute html.</p>
 </div></span>
   
 </li>
@@ -182,8 +180,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute o_embed_json.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute o_embed_json.</p>
 </div></span>
   
 </li>
@@ -209,8 +206,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute provider.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute provider.</p>
 </div></span>
   
 </li>
@@ -236,8 +232,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute url.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute url.</p>
 </div></span>
   
 </li>
@@ -259,7 +254,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#as_html-instance_method" title="#as_html (instance method)">- (Object) <strong>as_html</strong>(link_resolver = nil) </a>
+      <a href="#as_html-instance_method" title="#as_html (instance method)">- (String) <strong>as_html</strong>(link_resolver = nil) </a>
     
 
     
@@ -273,7 +268,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>Generate an HTML representation of the fragment.</p>
+</div></span>
   
 </li>
 
@@ -297,8 +293,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>A new instance of Embed.</p>
+    <span class="summary_desc"><div class='inline'><p>A new instance of Embed.</p>
 </div></span>
   
 </li>
@@ -332,8 +327,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Returns a new instance of Embed</p>
+    <p>Returns a new instance of Embed</p>
 
 
   </div>
@@ -388,8 +382,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Returns the value of attribute embed_type</p>
+    <p>Returns the value of attribute embed_type</p>
 
 
   </div>
@@ -431,8 +424,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Returns the value of attribute html</p>
+    <p>Returns the value of attribute html</p>
 
 
   </div>
@@ -474,8 +466,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Returns the value of attribute o_embed_json</p>
+    <p>Returns the value of attribute o_embed_json</p>
 
 
   </div>
@@ -517,8 +508,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Returns the value of attribute provider</p>
+    <p>Returns the value of attribute provider</p>
 
 
   </div>
@@ -560,8 +550,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Returns the value of attribute url</p>
+    <p>Returns the value of attribute url</p>
 
 
   </div>
@@ -600,28 +589,77 @@
       <div class="method_details first">
   <h3 class="signature first" id="as_html-instance_method">
   
-    - (<tt>Object</tt>) <strong>as_html</strong>(link_resolver = nil) 
+    - (<tt>String</tt>) <strong>as_html</strong>(link_resolver = nil) 
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Generate an HTML representation of the fragment</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>link_resolver</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../LinkResolver.html" title="Prismic::LinkResolver (class)">LinkResolver</a></span></tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The LinkResolver used to build
+application&#39;s specific URL</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the HTML representation</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-15
-16
-17
-18
-19
-20
-21</pre>
+21
+22
+23
+24
+25
+26
+27</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/embed.rb', line 15</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/embed.rb', line 21</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_as_html'>as_html</span><span class='lparen'>(</span><span class='id identifier rubyid_link_resolver'>link_resolver</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='heredoc_beg'>&lt;&lt;-HTML</span>
@@ -640,7 +678,7 @@
 </div>
 
     <div id="footer">
-  Generated on Wed Apr 16 16:34:42 2014 by
+  Generated on Wed Apr 16 18:58:05 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.4 (ruby-2.1.1).
 </div>

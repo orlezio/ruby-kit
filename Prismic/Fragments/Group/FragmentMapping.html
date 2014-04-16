@@ -130,8 +130,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>a hash containing all the fragments in the fragment list.</p>
+    <span class="summary_desc"><div class='inline'><p>a hash containing all the fragments in the fragment list.</p>
 </div></span>
   
 </li>
@@ -157,6 +156,8 @@
     
 
     
+      (also: #get)
+    
   </span>
   
   
@@ -167,9 +168,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Accessing the right fragment of the fragment list: <a
-href="'caption'">fl</a>.</p>
+    <span class="summary_desc"><div class='inline'><p>Accessing the right fragment of the fragment list: <code>fl[&#39;caption&#39;]</code>.</p>
 </div></span>
   
 </li>
@@ -178,7 +177,7 @@ href="'caption'">fl</a>.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#as_html-instance_method" title="#as_html (instance method)">- (Object) <strong>as_html</strong>(link_resolver = nil) </a>
+      <a href="#as_html-instance_method" title="#as_html (instance method)">- (String) <strong>as_html</strong>(link_resolver = nil) </a>
     
 
     
@@ -192,7 +191,8 @@ href="'caption'">fl</a>.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>Generate an HTML representation of the fragments.</p>
+</div></span>
   
 </li>
 
@@ -200,7 +200,7 @@ href="'caption'">fl</a>.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#as_text-instance_method" title="#as_text (instance method)">- (Object) <strong>as_text</strong> </a>
+      <a href="#as_text-instance_method" title="#as_text (instance method)">- (String) <strong>as_text</strong> </a>
     
 
     
@@ -214,7 +214,8 @@ href="'caption'">fl</a>.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>Generate a text representation of the fragment.</p>
+</div></span>
   
 </li>
 
@@ -222,7 +223,7 @@ href="'caption'">fl</a>.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#each-instance_method" title="#each (instance method)">- (Object) <strong>each</strong>(&amp;blk) </a>
+      <a href="#each-instance_method" title="#each (instance method)">- (Object) <strong>each</strong> {|name, fragment| ... }</a>
     
 
     
@@ -260,8 +261,7 @@ href="'caption'">fl</a>.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>A new instance of FragmentMapping.</p>
+    <span class="summary_desc"><div class='inline'><p>A new instance of FragmentMapping.</p>
 </div></span>
   
 </li>
@@ -270,7 +270,7 @@ href="'caption'">fl</a>.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#length-instance_method" title="#length (instance method)">- (Object) <strong>length</strong> </a>
+      <a href="#length-instance_method" title="#length (instance method)">- (Fixum) <strong>length</strong> </a>
     
 
     
@@ -309,8 +309,7 @@ href="'caption'">fl</a>.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Returns a new instance of FragmentMapping</p>
+    <p>Returns a new instance of FragmentMapping</p>
 
 
   </div>
@@ -324,15 +323,15 @@ href="'caption'">fl</a>.</p>
       <pre class="lines">
 
 
-47
-48
-49</pre>
+59
+60
+61</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/group.rb', line 47</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/group.rb', line 59</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_fragments'>fragments</span><span class='rparen'>)</span>
-	<span class='ivar'>@fragments</span> <span class='op'>=</span> <span class='id identifier rubyid_fragments'>fragments</span>
+  <span class='ivar'>@fragments</span> <span class='op'>=</span> <span class='id identifier rubyid_fragments'>fragments</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -357,8 +356,7 @@ href="'caption'">fl</a>.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>a hash containing all the fragments in the fragment list</p>
+    <p>a hash containing all the fragments in the fragment list</p>
 
 
   </div>
@@ -372,12 +370,12 @@ href="'caption'">fl</a>.</p>
       <pre class="lines">
 
 
-45
-46
-47</pre>
+57
+58
+59</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/group.rb', line 45</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/group.rb', line 57</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fragments'>fragments</span>
   <span class='ivar'>@fragments</span>
@@ -401,13 +399,15 @@ href="'caption'">fl</a>.</p>
   
 
   
+    <span class="aliases">Also known as:
+    <span class="names"><span id='get-instance_method'>get</span></span>
+    </span>
+  
 
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Accessing the right fragment of the fragment list: <a
-href="'caption'">fl</a></p>
+    <p>Accessing the right fragment of the fragment list: <code>fl[&#39;caption&#39;]</code></p>
 
 
   </div>
@@ -421,15 +421,15 @@ href="'caption'">fl</a></p>
       <pre class="lines">
 
 
-52
-53
-54</pre>
+64
+65
+66</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/group.rb', line 52</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/group.rb', line 64</span>
 
 <span class='kw'>def</span> <span class='op'>[]</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
-	<span class='ivar'>@fragments</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span>
+  <span class='ivar'>@fragments</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -439,31 +439,80 @@ href="'caption'">fl</a></p>
       <div class="method_details ">
   <h3 class="signature " id="as_html-instance_method">
   
-    - (<tt>Object</tt>) <strong>as_html</strong>(link_resolver = nil) 
+    - (<tt>String</tt>) <strong>as_html</strong>(link_resolver = nil) 
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Generate an HTML representation of the fragments</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>link_resolver</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../LinkResolver.html" title="Prismic::LinkResolver (class)">LinkResolver</a></span></tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The LinkResolver used to build
+application&#39;s specific URL</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the HTML representation</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-66
-67
-68
-69
-70</pre>
+88
+89
+90
+91
+92</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/group.rb', line 66</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/group.rb', line 88</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_as_html'>as_html</span><span class='lparen'>(</span><span class='id identifier rubyid_link_resolver'>link_resolver</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
-	<span class='ivar'>@fragments</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_fragment'>fragment</span><span class='op'>|</span>
-		<span class='tstring'><span class='tstring_beg'>%(</span><span class='tstring_content'>&lt;section data-field=&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>&quot;&gt;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_fragment'>fragment</span><span class='period'>.</span><span class='id identifier rubyid_as_html'>as_html</span><span class='lparen'>(</span><span class='id identifier rubyid_link_resolver'>link_resolver</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>&lt;/section&gt;</span><span class='tstring_end'>)</span></span>
-	<span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='ivar'>@fragments</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_fragment'>fragment</span><span class='op'>|</span>
+    <span class='tstring'><span class='tstring_beg'>%(</span><span class='tstring_content'>&lt;section data-field=&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>&quot;&gt;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_fragment'>fragment</span><span class='period'>.</span><span class='id identifier rubyid_as_html'>as_html</span><span class='lparen'>(</span><span class='id identifier rubyid_link_resolver'>link_resolver</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>&lt;/section&gt;</span><span class='tstring_end'>)</span></span>
+  <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -473,27 +522,54 @@ href="'caption'">fl</a></p>
       <div class="method_details ">
   <h3 class="signature " id="as_text-instance_method">
   
-    - (<tt>Object</tt>) <strong>as_text</strong> 
+    - (<tt>String</tt>) <strong>as_text</strong> 
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Generate a text representation of the fragment</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the text representation</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-72
-73
-74</pre>
+97
+98
+99</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/group.rb', line 72</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/group.rb', line 97</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_as_text'>as_text</span>
-	<span class='ivar'>@fragments</span><span class='period'>.</span><span class='id identifier rubyid_values'>values</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_fragment'>fragment</span><span class='op'>|</span> <span class='id identifier rubyid_fragment'>fragment</span><span class='period'>.</span><span class='id identifier rubyid_as_text'>as_text</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='ivar'>@fragments</span><span class='period'>.</span><span class='id identifier rubyid_values'>values</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_fragment'>fragment</span><span class='op'>|</span> <span class='id identifier rubyid_fragment'>fragment</span><span class='period'>.</span><span class='id identifier rubyid_as_text'>as_text</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -503,27 +579,62 @@ href="'caption'">fl</a></p>
       <div class="method_details ">
   <h3 class="signature " id="each-instance_method">
   
-    - (<tt>Object</tt>) <strong>each</strong>(&amp;blk) 
+    - (<tt>Object</tt>) <strong>each</strong> {|name, fragment| ... }
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Yield Parameters:</p>
+<ul class="yieldparam">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>fragment</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Fragment.html" title="Prismic::Fragments::Fragment (class)">Fragment</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-56
-57
-58</pre>
+71
+72
+73</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/group.rb', line 56</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/group.rb', line 71</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_each'>each</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_blk'>blk</span><span class='rparen'>)</span>
-	<span class='ivar'>@fragments</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_blk'>blk</span><span class='rparen'>)</span>
+  <span class='ivar'>@fragments</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_blk'>blk</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -533,7 +644,7 @@ href="'caption'">fl</a></p>
       <div class="method_details ">
   <h3 class="signature " id="length-instance_method">
   
-    - (<tt>Object</tt>) <strong>length</strong> 
+    - (<tt>Fixum</tt>) <strong>length</strong> 
   
 
   
@@ -543,21 +654,43 @@ href="'caption'">fl</a></p>
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Fixum</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-61
-62
-63</pre>
+77
+78
+79</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/group.rb', line 61</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic/fragments/group.rb', line 77</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_length'>length</span>
-	<span class='ivar'>@fragments</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span>
+  <span class='ivar'>@fragments</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -569,7 +702,7 @@ href="'caption'">fl</a></p>
 </div>
 
     <div id="footer">
-  Generated on Wed Apr 16 16:34:42 2014 by
+  Generated on Wed Apr 16 18:58:05 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.4 (ruby-2.1.1).
 </div>

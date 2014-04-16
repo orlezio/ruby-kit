@@ -101,12 +101,11 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    
-<p>Represent a prismic.io reference, a fix point in time.</p>
+    <p>Represent a prismic.io reference, a fix point in time.</p>
 
 <p>The references must be provided when accessing to any prismic.io resource
-(except /api) and allow to assert that the URL you use will always returns
-the same results.</p>
+(except /api) and allow to assert that the URL you use will always
+returns the same results.</p>
 
 
   </div>
@@ -124,7 +123,7 @@ the same results.</p>
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#is_master-instance_method" title="#is_master (instance method)">- (Object) <strong>is_master</strong> </a>
+      <a href="#is_master-instance_method" title="#is_master (instance method)">- (Boolean) <strong>is_master</strong> </a>
     
 
     
@@ -143,8 +142,7 @@ the same results.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute is_master.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute is_master.</p>
 </div></span>
   
 </li>
@@ -153,7 +151,7 @@ the same results.</p>
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#label-instance_method" title="#label (instance method)">- (Object) <strong>label</strong> </a>
+      <a href="#label-instance_method" title="#label (instance method)">- (String) <strong>label</strong> </a>
     
 
     
@@ -170,8 +168,7 @@ the same results.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute label.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute label.</p>
 </div></span>
   
 </li>
@@ -180,7 +177,7 @@ the same results.</p>
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#ref-instance_method" title="#ref (instance method)">- (Object) <strong>ref</strong> </a>
+      <a href="#ref-instance_method" title="#ref (instance method)">- (String) <strong>ref</strong> </a>
     
 
     
@@ -197,8 +194,7 @@ the same results.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute ref.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute ref.</p>
 </div></span>
   
 </li>
@@ -207,7 +203,7 @@ the same results.</p>
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#scheduled_at-instance_method" title="#scheduled_at (instance method)">- (Object) <strong>scheduled_at</strong> </a>
+      <a href="#scheduled_at-instance_method" title="#scheduled_at (instance method)">- (Time) <strong>scheduled_at</strong> </a>
     
 
     
@@ -224,8 +220,7 @@ the same results.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute scheduled_at.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute scheduled_at.</p>
 </div></span>
   
 </li>
@@ -263,8 +258,7 @@ the same results.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>A new instance of Ref.</p>
+    <span class="summary_desc"><div class='inline'><p>A new instance of Ref.</p>
 </div></span>
   
 </li>
@@ -287,8 +281,7 @@ the same results.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Returns a new instance of Ref</p>
+    <p>Returns a new instance of Ref</p>
 
 
   </div>
@@ -302,15 +295,15 @@ the same results.</p>
       <pre class="lines">
 
 
-350
-351
-352
-353
-354
-355</pre>
+450
+451
+452
+453
+454
+455</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 350</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 450</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_ref'>ref</span><span class='comma'>,</span> <span class='id identifier rubyid_label'>label</span><span class='comma'>,</span> <span class='id identifier rubyid_is_master'>is_master</span> <span class='op'>=</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='id identifier rubyid_scheduled_at'>scheduled_at</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='ivar'>@ref</span> <span class='op'>=</span> <span class='id identifier rubyid_ref'>ref</span>
@@ -333,7 +326,7 @@ the same results.</p>
       <div class="method_details first">
   <h3 class="signature first" id="is_master-instance_method">
   
-    - (<tt>Object</tt>) <strong>is_master</strong> 
+    - (<tt>Boolean</tt>) <strong>is_master</strong> 
   
 
   
@@ -345,14 +338,26 @@ the same results.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Returns the value of attribute is_master</p>
+    <p>Returns the value of attribute is_master.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -360,12 +365,12 @@ the same results.</p>
       <pre class="lines">
 
 
-348
-349
-350</pre>
+443
+444
+445</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 348</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 443</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_is_master'>is_master</span>
   <span class='ivar'>@is_master</span>
@@ -380,7 +385,7 @@ the same results.</p>
       <div class="method_details ">
   <h3 class="signature " id="label-instance_method">
   
-    - (<tt>Object</tt>) <strong>label</strong> 
+    - (<tt>String</tt>) <strong>label</strong> 
   
 
   
@@ -388,14 +393,26 @@ the same results.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Returns the value of attribute label</p>
+    <p>Returns the value of attribute label.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -403,12 +420,12 @@ the same results.</p>
       <pre class="lines">
 
 
-348
-349
-350</pre>
+438
+439
+440</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 348</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 438</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_label'>label</span>
   <span class='ivar'>@label</span>
@@ -423,7 +440,7 @@ the same results.</p>
       <div class="method_details ">
   <h3 class="signature " id="ref-instance_method">
   
-    - (<tt>Object</tt>) <strong>ref</strong> 
+    - (<tt>String</tt>) <strong>ref</strong> 
   
 
   
@@ -431,14 +448,26 @@ the same results.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Returns the value of attribute ref</p>
+    <p>Returns the value of attribute ref.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -446,12 +475,12 @@ the same results.</p>
       <pre class="lines">
 
 
-348
-349
-350</pre>
+433
+434
+435</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 348</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 433</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_ref'>ref</span>
   <span class='ivar'>@ref</span>
@@ -466,7 +495,7 @@ the same results.</p>
       <div class="method_details ">
   <h3 class="signature " id="scheduled_at-instance_method">
   
-    - (<tt>Object</tt>) <strong>scheduled_at</strong> 
+    - (<tt>Time</tt>) <strong>scheduled_at</strong> 
   
 
   
@@ -474,14 +503,26 @@ the same results.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Returns the value of attribute scheduled_at</p>
+    <p>Returns the value of attribute scheduled_at.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Time</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -489,12 +530,12 @@ the same results.</p>
       <pre class="lines">
 
 
-348
-349
-350</pre>
+448
+449
+450</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 348</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 448</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_scheduled_at'>scheduled_at</span>
   <span class='ivar'>@scheduled_at</span>
@@ -510,7 +551,7 @@ the same results.</p>
 </div>
 
     <div id="footer">
-  Generated on Wed Apr 16 16:34:41 2014 by
+  Generated on Wed Apr 16 18:58:04 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.4 (ruby-2.1.1).
 </div>

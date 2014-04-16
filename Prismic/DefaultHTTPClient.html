@@ -86,8 +86,7 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    
-<p>Default HTTP client implementation, using the standard Net::HTTP library.</p>
+    <p>Default HTTP client implementation, using the standard Net::HTTP library.</p>
 
 
   </div>
@@ -127,8 +126,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Performs a GET call and returns the result.</p>
+    <span class="summary_desc"><div class='inline'><p>Performs a GET call and returns the result.</p>
 </div></span>
   
 </li>
@@ -151,8 +149,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Performs a POST call and returns the result.</p>
+    <span class="summary_desc"><div class='inline'><p>Performs a POST call and returns the result.</p>
 </div></span>
   
 </li>
@@ -200,15 +197,11 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Performs a GET call and returns the result</p>
+    <p>Performs a GET call and returns the result</p>
 
-<p>The result must respond to</p>
-<ul><li>
-<p>code: returns the response&#39;s HTTP status code (as number or String)</p>
-</li><li>
-<p>body: returns the response&#39;s body (as String)</p>
-</li></ul>
+<p>The result must respond to
+- code: returns the response&#39;s HTTP status code (as number or String)
+- body: returns the response&#39;s body (as String)</p>
 
 
   </div>
@@ -222,16 +215,16 @@
       <pre class="lines">
 
 
-384
-385
-386
-387
-388
-389
-390</pre>
+489
+490
+491
+492
+493
+494
+495</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 384</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 489</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_uri'>uri</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_uri'>uri</span> <span class='op'>=</span> <span class='const'>URI</span><span class='lparen'>(</span><span class='id identifier rubyid_uri'>uri</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_uri'>uri</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>String</span><span class='rparen'>)</span>
@@ -256,15 +249,11 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Performs a POST call and returns the result</p>
+    <p>Performs a POST call and returns the result</p>
 
-<p>The result must respond to</p>
-<ul><li>
-<p>code: returns the response&#39;s HTTP status code (as number or String)</p>
-</li><li>
-<p>body: returns the response&#39;s body (as String)</p>
-</li></ul>
+<p>The result must respond to
+- code: returns the response&#39;s HTTP status code (as number or String)
+- body: returns the response&#39;s body (as String)</p>
 
 
   </div>
@@ -278,16 +267,16 @@
       <pre class="lines">
 
 
-397
-398
-399
-400
-401
-402
-403</pre>
+502
+503
+504
+505
+506
+507
+508</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 397</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 502</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='id identifier rubyid_uri'>uri</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_headers'>headers</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_uri'>uri</span> <span class='op'>=</span> <span class='const'>URI</span><span class='lparen'>(</span><span class='id identifier rubyid_uri'>uri</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_uri'>uri</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>String</span><span class='rparen'>)</span>
@@ -316,20 +305,20 @@
       <pre class="lines">
 
 
-405
-406
-407
-408
-409
-410
-411
-412
-413
-414
-415</pre>
+510
+511
+512
+513
+514
+515
+516
+517
+518
+519
+520</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 405</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 510</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_url_encode'>url_encode</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
   <span class='comment'># Can&#39;t use URI.encode_www_form (doesn&#39;t support multi-values in 1.9.2)
@@ -352,7 +341,7 @@
 </div>
 
     <div id="footer">
-  Generated on Wed Apr 16 16:34:40 2014 by
+  Generated on Wed Apr 16 18:58:04 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.4 (ruby-2.1.1).
 </div>

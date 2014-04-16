@@ -101,24 +101,21 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    
-<p>A SearchForm represent a Form returned by the prismic.io API.</p>
+    <p>A SearchForm represent a Form returned by the prismic.io API.</p>
 
 <p>These forms depend on the prismic.io repository, and can be filled and sent
 as regular HTML forms.</p>
 
 <p>You may get a SearchForm instance through the <span class='object_link'><a href="API.html#form-instance_method" title="Prismic::API#form (method)">API#form</a></span> method.</p>
 
-<p>The SearchForm instance contains helper methods for each predefined
-form&#39;s fields. Note that these methods are not created if they risk to
-add confusion:</p>
-<ul><li>
-<p>only letters, underscore and digits are authorized in the name</p>
-</li><li>
-<p>name starting with a digit or an underscore are forbidden</p>
-</li><li>
-<p>generated method can&#39;t override existing methods</p>
-</li></ul>
+<p>The SearchForm instance contains helper methods for each predefined form&#39;s fields.
+Note that these methods are not created if they risk to add confusion:</p>
+
+<ul>
+<li>only letters, underscore and digits are authorized in the name</li>
+<li>name starting with a digit or an underscore are forbidden</li>
+<li>generated method can&#39;t override existing methods</li>
+</ul>
 
 
   </div>
@@ -175,8 +172,7 @@ add confusion:</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute api.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute api.</p>
 </div></span>
   
 </li>
@@ -202,8 +198,7 @@ add confusion:</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute data.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute data.</p>
 </div></span>
   
 </li>
@@ -229,8 +224,7 @@ add confusion:</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute form.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute form.</p>
 </div></span>
   
 </li>
@@ -256,8 +250,7 @@ add confusion:</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Set the <span class='object_link'><a href="Ref.html" title="Prismic::Ref (class)">reference</a></span> to use.</p>
+    <span class="summary_desc"><div class='inline'><p>Set the <span class='object_link'><a href="Ref.html" title="Prismic::Ref (class)">reference</a></span> to use.</p>
 </div></span>
   
 </li>
@@ -279,7 +272,7 @@ add confusion:</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#form_action-instance_method" title="#form_action (instance method)">- (Object) <strong>form_action</strong> </a>
+      <a href="#form_action-instance_method" title="#form_action (instance method)">- (String) <strong>form_action</strong> </a>
     
 
     
@@ -293,7 +286,8 @@ add confusion:</p>
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>Returns the form&#39;s action (URL).</p>
+</div></span>
   
 </li>
 
@@ -301,7 +295,7 @@ add confusion:</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#form_enctype-instance_method" title="#form_enctype (instance method)">- (Object) <strong>form_enctype</strong> </a>
+      <a href="#form_enctype-instance_method" title="#form_enctype (instance method)">- (String) <strong>form_enctype</strong> </a>
     
 
     
@@ -315,7 +309,8 @@ add confusion:</p>
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>Returns the form&#39;s encoding type.</p>
+</div></span>
   
 </li>
 
@@ -323,7 +318,7 @@ add confusion:</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#form_fields-instance_method" title="#form_fields (instance method)">- (Object) <strong>form_fields</strong> </a>
+      <a href="#form_fields-instance_method" title="#form_fields (instance method)">- (String) <strong>form_fields</strong> </a>
     
 
     
@@ -337,7 +332,8 @@ add confusion:</p>
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>Returns the form&#39;s fields.</p>
+</div></span>
   
 </li>
 
@@ -345,7 +341,7 @@ add confusion:</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#form_method-instance_method" title="#form_method (instance method)">- (Object) <strong>form_method</strong> </a>
+      <a href="#form_method-instance_method" title="#form_method (instance method)">- (String) <strong>form_method</strong> </a>
     
 
     
@@ -359,7 +355,8 @@ add confusion:</p>
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>Returns the form&#39;s HTTP method.</p>
+</div></span>
   
 </li>
 
@@ -367,7 +364,7 @@ add confusion:</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#form_name-instance_method" title="#form_name (instance method)">- (Object) <strong>form_name</strong> </a>
+      <a href="#form_name-instance_method" title="#form_name (instance method)">- (String) <strong>form_name</strong> </a>
     
 
     
@@ -381,7 +378,8 @@ add confusion:</p>
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>Returns the form&#39;s name.</p>
+</div></span>
   
 </li>
 
@@ -389,7 +387,7 @@ add confusion:</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#form_rel-instance_method" title="#form_rel (instance method)">- (Object) <strong>form_rel</strong> </a>
+      <a href="#form_rel-instance_method" title="#form_rel (instance method)">- (String) <strong>form_rel</strong> </a>
     
 
     
@@ -403,7 +401,8 @@ add confusion:</p>
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>Returns the form&#39;s relationship.</p>
+</div></span>
   
 </li>
 
@@ -427,8 +426,7 @@ add confusion:</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>A new instance of SearchForm.</p>
+    <span class="summary_desc"><div class='inline'><p>A new instance of SearchForm.</p>
 </div></span>
   
 </li>
@@ -451,8 +449,7 @@ add confusion:</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Specify a orderings for this form.</p>
+    <span class="summary_desc"><div class='inline'><p>Specify a orderings for this form.</p>
 </div></span>
   
 </li>
@@ -475,8 +472,7 @@ add confusion:</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Specify a page for this form.</p>
+    <span class="summary_desc"><div class='inline'><p>Specify a page for this form.</p>
 </div></span>
   
 </li>
@@ -499,8 +495,7 @@ add confusion:</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Specify a page size for this form.</p>
+    <span class="summary_desc"><div class='inline'><p>Specify a page size for this form.</p>
 </div></span>
   
 </li>
@@ -523,8 +518,7 @@ add confusion:</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Specify a query for this form.</p>
+    <span class="summary_desc"><div class='inline'><p>Specify a query for this form.</p>
 </div></span>
   
 </li>
@@ -547,8 +541,7 @@ add confusion:</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Specify a parameter for this form.</p>
+    <span class="summary_desc"><div class='inline'><p>Specify a parameter for this form.</p>
 </div></span>
   
 </li>
@@ -571,8 +564,7 @@ add confusion:</p>
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Submit the form.</p>
+    <span class="summary_desc"><div class='inline'><p>Submit the form.</p>
 </div></span>
   
 </li>
@@ -595,8 +587,7 @@ add confusion:</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Returns a new instance of SearchForm</p>
+    <p>Returns a new instance of SearchForm</p>
 
 
   </div>
@@ -610,18 +601,18 @@ add confusion:</p>
       <pre class="lines">
 
 
-98
-99
-100
-101
-102
-103
-104
-105
-106</pre>
+132
+133
+134
+135
+136
+137
+138
+139
+140</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 98</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 132</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_api'>api</span><span class='comma'>,</span> <span class='id identifier rubyid_form'>form</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_ref'>ref</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='ivar'>@api</span> <span class='op'>=</span> <span class='id identifier rubyid_api'>api</span>
@@ -655,8 +646,7 @@ add confusion:</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Returns the value of attribute api</p>
+    <p>Returns the value of attribute api</p>
 
 
   </div>
@@ -670,12 +660,12 @@ add confusion:</p>
       <pre class="lines">
 
 
-96
-97
-98</pre>
+130
+131
+132</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 96</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 130</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_api'>api</span>
   <span class='ivar'>@api</span>
@@ -698,8 +688,7 @@ add confusion:</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Returns the value of attribute data</p>
+    <p>Returns the value of attribute data</p>
 
 
   </div>
@@ -713,12 +702,12 @@ add confusion:</p>
       <pre class="lines">
 
 
-96
-97
-98</pre>
+130
+131
+132</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 96</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 130</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_data'>data</span>
   <span class='ivar'>@data</span>
@@ -741,8 +730,7 @@ add confusion:</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Returns the value of attribute form</p>
+    <p>Returns the value of attribute form</p>
 
 
   </div>
@@ -756,12 +744,12 @@ add confusion:</p>
       <pre class="lines">
 
 
-96
-97
-98</pre>
+130
+131
+132</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 96</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 130</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_form'>form</span>
   <span class='ivar'>@form</span>
@@ -784,8 +772,7 @@ add confusion:</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Set the <span class='object_link'><a href="Ref.html" title="Prismic::Ref (class)">reference</a></span> to use</p>
+    <p>Set the <span class='object_link'><a href="Ref.html" title="Prismic::Ref (class)">reference</a></span> to use</p>
 
 
   </div>
@@ -804,8 +791,7 @@ add confusion:</p>
       
       
         &mdash;
-        <div class='inline'>
-<p>The <span class='object_link'><a href="Ref.html" title="Prismic::Ref (class)">reference</a></span> to use</p>
+        <div class='inline'><p>The <span class='object_link'><a href="Ref.html" title="Prismic::Ref (class)">reference</a></span> to use</p>
 </div>
       
     </li>
@@ -823,8 +809,7 @@ add confusion:</p>
       
       
         &mdash;
-        <div class='inline'>
-<p>self</p>
+        <div class='inline'><p>self</p>
 </div>
       
     </li>
@@ -837,12 +822,12 @@ add confusion:</p>
       <pre class="lines">
 
 
-229
-230
-231</pre>
+285
+286
+287</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 229</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 285</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_ref'>ref</span>
   <span class='ivar'>@ref</span>
@@ -862,24 +847,47 @@ add confusion:</p>
       <div class="method_details first">
   <h3 class="signature first" id="form_action-instance_method">
   
-    - (<tt>Object</tt>) <strong>form_action</strong> 
+    - (<tt>String</tt>) <strong>form_action</strong> 
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the form&#39;s action (URL)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-159
-160
-161</pre>
+208
+209
+210</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 159</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 208</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_form_action'>form_action</span>
   <span class='id identifier rubyid_form'>form</span><span class='period'>.</span><span class='id identifier rubyid_action'>action</span>
@@ -892,24 +900,47 @@ add confusion:</p>
       <div class="method_details ">
   <h3 class="signature " id="form_enctype-instance_method">
   
-    - (<tt>Object</tt>) <strong>form_enctype</strong> 
+    - (<tt>String</tt>) <strong>form_enctype</strong> 
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the form&#39;s encoding type</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-155
-156
-157</pre>
+201
+202
+203</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 155</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 201</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_form_enctype'>form_enctype</span>
   <span class='id identifier rubyid_form'>form</span><span class='period'>.</span><span class='id identifier rubyid_enctype'>enctype</span>
@@ -922,24 +953,47 @@ add confusion:</p>
       <div class="method_details ">
   <h3 class="signature " id="form_fields-instance_method">
   
-    - (<tt>Object</tt>) <strong>form_fields</strong> 
+    - (<tt>String</tt>) <strong>form_fields</strong> 
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the form&#39;s fields</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-163
-164
-165</pre>
+215
+216
+217</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 163</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 215</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_form_fields'>form_fields</span>
   <span class='id identifier rubyid_form'>form</span><span class='period'>.</span><span class='id identifier rubyid_fields'>fields</span>
@@ -952,24 +1006,47 @@ add confusion:</p>
       <div class="method_details ">
   <h3 class="signature " id="form_method-instance_method">
   
-    - (<tt>Object</tt>) <strong>form_method</strong> 
+    - (<tt>String</tt>) <strong>form_method</strong> 
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the form&#39;s HTTP method</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-147
-148
-149</pre>
+187
+188
+189</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 147</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 187</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_form_method'>form_method</span>
   <span class='id identifier rubyid_form'>form</span><span class='period'>.</span><span class='id identifier rubyid_form_method'>form_method</span>
@@ -982,24 +1059,47 @@ add confusion:</p>
       <div class="method_details ">
   <h3 class="signature " id="form_name-instance_method">
   
-    - (<tt>Object</tt>) <strong>form_name</strong> 
+    - (<tt>String</tt>) <strong>form_name</strong> 
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the form&#39;s name</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-143
-144
-145</pre>
+180
+181
+182</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 143</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 180</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_form_name'>form_name</span>
   <span class='id identifier rubyid_form'>form</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span>
@@ -1012,24 +1112,47 @@ add confusion:</p>
       <div class="method_details ">
   <h3 class="signature " id="form_rel-instance_method">
   
-    - (<tt>Object</tt>) <strong>form_rel</strong> 
+    - (<tt>String</tt>) <strong>form_rel</strong> 
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the form&#39;s relationship</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-151
-152
-153</pre>
+194
+195
+196</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 151</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 194</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_form_rel'>form_rel</span>
   <span class='id identifier rubyid_form'>form</span><span class='period'>.</span><span class='id identifier rubyid_rel'>rel</span>
@@ -1050,8 +1173,7 @@ add confusion:</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Specify a orderings for this form.</p>
+    <p>Specify a orderings for this form.</p>
 
 
   </div>
@@ -1070,8 +1192,7 @@ add confusion:</p>
       
       
         &mdash;
-        <div class='inline'>
-<p>The orderings</p>
+        <div class='inline'><p>The orderings</p>
 </div>
       
     </li>
@@ -1089,8 +1210,7 @@ add confusion:</p>
       
       
         &mdash;
-        <div class='inline'>
-<p>self</p>
+        <div class='inline'><p>self</p>
 </div>
       
     </li>
@@ -1106,7 +1226,7 @@ add confusion:</p>
 </pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 113</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 147</span>
 
 </pre>
     </td>
@@ -1125,8 +1245,7 @@ add confusion:</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Specify a page for this form.</p>
+    <p>Specify a page for this form.</p>
 
 
   </div>
@@ -1145,8 +1264,7 @@ add confusion:</p>
       
       
         &mdash;
-        <div class='inline'>
-<p>The page</p>
+        <div class='inline'><p>The page</p>
 </div>
       
     </li>
@@ -1164,8 +1282,7 @@ add confusion:</p>
       
       
         &mdash;
-        <div class='inline'>
-<p>self</p>
+        <div class='inline'><p>self</p>
 </div>
       
     </li>
@@ -1181,7 +1298,7 @@ add confusion:</p>
 </pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 118</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 152</span>
 
 </pre>
     </td>
@@ -1200,8 +1317,7 @@ add confusion:</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Specify a page size for this form.</p>
+    <p>Specify a page size for this form.</p>
 
 
   </div>
@@ -1220,8 +1336,7 @@ add confusion:</p>
       
       
         &mdash;
-        <div class='inline'>
-<p>The page size</p>
+        <div class='inline'><p>The page size</p>
 </div>
       
     </li>
@@ -1239,8 +1354,7 @@ add confusion:</p>
       
       
         &mdash;
-        <div class='inline'>
-<p>self</p>
+        <div class='inline'><p>self</p>
 </div>
       
     </li>
@@ -1256,7 +1370,7 @@ add confusion:</p>
 </pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 123</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 157</span>
 
 </pre>
     </td>
@@ -1275,8 +1389,7 @@ add confusion:</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Specify a query for this form.</p>
+    <p>Specify a query for this form.</p>
 
 
   </div>
@@ -1295,8 +1408,7 @@ add confusion:</p>
       
       
         &mdash;
-        <div class='inline'>
-<p>The query</p>
+        <div class='inline'><p>The query</p>
 </div>
       
     </li>
@@ -1314,8 +1426,7 @@ add confusion:</p>
       
       
         &mdash;
-        <div class='inline'>
-<p>self</p>
+        <div class='inline'><p>self</p>
 </div>
       
     </li>
@@ -1331,7 +1442,7 @@ add confusion:</p>
 </pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 108</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 142</span>
 
 </pre>
     </td>
@@ -1350,8 +1461,7 @@ add confusion:</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Specify a parameter for this form</p>
+    <p>Specify a parameter for this form</p>
 
 
   </div>
@@ -1370,8 +1480,7 @@ add confusion:</p>
       
       
         &mdash;
-        <div class='inline'>
-<p>The parameter&#39;s name</p>
+        <div class='inline'><p>The parameter&#39;s name</p>
 </div>
       
     </li>
@@ -1386,8 +1495,7 @@ add confusion:</p>
       
       
         &mdash;
-        <div class='inline'>
-<p>The parameter&#39;s value</p>
+        <div class='inline'><p>The parameter&#39;s value</p>
 </div>
       
     </li>
@@ -1405,8 +1513,7 @@ add confusion:</p>
       
       
         &mdash;
-        <div class='inline'>
-<p>self</p>
+        <div class='inline'><p>self</p>
 </div>
       
     </li>
@@ -1419,19 +1526,19 @@ add confusion:</p>
       <pre class="lines">
 
 
-213
-214
-215
-216
-217
-218
-219
-220
-221
-222</pre>
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 213</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 269</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_set'>set</span><span class='lparen'>(</span><span class='id identifier rubyid_field_name'>field_name</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_field'>field</span> <span class='op'>=</span> <span class='ivar'>@form</span><span class='period'>.</span><span class='id identifier rubyid_fields'>fields</span><span class='lbracket'>[</span><span class='id identifier rubyid_field_name'>field_name</span><span class='rbracket'>]</span>
@@ -1462,13 +1569,15 @@ add confusion:</p>
     
   <div class="note notetag">
     <strong>Note:</strong>
-    <div class='inline'>
-<p>The reference MUST be defined, either by setting it at
-<span class='object_link'><a href="API.html#create_search_form-instance_method" title="Prismic::API#create_search_form (method)">creation</a></span>, by using the <span class='object_link'><a href="#ref-instance_method" title="Prismic::SearchForm#ref (method)">#ref</a></span> method or by
-providing the ref parameter.</p>
+    <div class='inline'><p>The reference MUST be defined, either by:</p>
+
+<ul>
+<li>setting it at <span class='object_link'><a href="API.html#create_search_form-instance_method" title="Prismic::API#create_search_form (method)">creation</a></span></li>
+<li>using the <span class='object_link'><a href="#ref-instance_method" title="Prismic::SearchForm#ref (method)">#ref</a></span> method</li>
+<li>providing the ref parameter.</li>
+</ul>
 </div>
   </div>
-
 
 <p>Submit the form</p>
 
@@ -1491,8 +1600,8 @@ providing the ref parameter.</p>
       
       
         &mdash;
-        <div class='inline'>
-<p>The <span class='object_link'><a href="Ref.html" title="Prismic::Ref (class)">reference</a></span> to use (if not already defined)</p>
+        <div class='inline'><p>The <span class='object_link'><a href="Ref.html" title="Prismic::Ref (class)">reference</a></span> to use (if not already
+defined)</p>
 </div>
       
     </li>
@@ -1510,8 +1619,8 @@ providing the ref parameter.</p>
       
       
         &mdash;
-        <div class='inline'>
-<p>The results (array of Document object + pagination specifics)</p>
+        <div class='inline'><p>The results (array of Document object + pagination
+specifics)</p>
 </div>
       
     </li>
@@ -1537,39 +1646,39 @@ providing the ref parameter.</p>
       <pre class="lines">
 
 
-177
-178
-179
-180
-181
-182
-183
-184
-185
-186
-187
-188
-189
-190
-191
-192
-193
-194
-195
-196
-197
-198
-199
-200
-201
-202
-203
-204
-205
-206</pre>
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 177</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 233</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_submit'>submit</span><span class='lparen'>(</span><span class='id identifier rubyid_ref'>ref</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_ref'>ref</span><span class='lparen'>(</span><span class='id identifier rubyid_ref'>ref</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_ref'>ref</span>
@@ -1611,7 +1720,7 @@ providing the ref parameter.</p>
 </div>
 
     <div id="footer">
-  Generated on Wed Apr 16 16:34:40 2014 by
+  Generated on Wed Apr 16 18:58:04 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.4 (ruby-2.1.1).
 </div>

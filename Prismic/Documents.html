@@ -130,8 +130,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute next_page.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute next_page.</p>
 </div></span>
   
 </li>
@@ -157,8 +156,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute page.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute page.</p>
 </div></span>
   
 </li>
@@ -184,8 +182,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute prev_page.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute prev_page.</p>
 </div></span>
   
 </li>
@@ -211,8 +208,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute results.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute results.</p>
 </div></span>
   
 </li>
@@ -238,8 +234,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute results_per_page.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute results_per_page.</p>
 </div></span>
   
 </li>
@@ -265,8 +260,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute results_size.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute results_size.</p>
 </div></span>
   
 </li>
@@ -292,8 +286,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute total_pages.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute total_pages.</p>
 </div></span>
   
 </li>
@@ -319,8 +312,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute total_results_size.</p>
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute total_results_size.</p>
 </div></span>
   
 </li>
@@ -346,6 +338,8 @@
     
 
     
+      (also: #get)
+    
   </span>
   
   
@@ -356,8 +350,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Accessing the i-th document in the results.</p>
+    <span class="summary_desc"><div class='inline'><p>Accessing the i-th document in the results.</p>
 </div></span>
   
 </li>
@@ -366,7 +359,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#each-instance_method" title="#each (instance method)">- (Object) <strong>each</strong>(&amp;blk) </a>
+      <a href="#each-instance_method" title="#each (instance method)">- (Object) <strong>each</strong> {|document| ... }</a>
     
 
     
@@ -380,7 +373,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>Iterates over received documents.</p>
+</div></span>
   
 </li>
 
@@ -404,8 +398,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>A new instance of Documents.</p>
+    <span class="summary_desc"><div class='inline'><p>A new instance of Documents.</p>
 </div></span>
   
 </li>
@@ -414,7 +407,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#length-instance_method" title="#length (instance method)">- (Object) <strong>length</strong> </a>
+      <a href="#length-instance_method" title="#length (instance method)">- (Fixum) <strong>length</strong> </a>
     
 
     
@@ -430,7 +423,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'><p>Return the number of returned documents.</p>
+</div></span>
   
 </li>
 
@@ -453,8 +447,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Returns a new instance of Documents</p>
+    <p>Returns a new instance of Documents</p>
 
 
   </div>
@@ -468,19 +461,19 @@
       <pre class="lines">
 
 
-257
-258
-259
-260
-261
-262
-263
-264
-265
-266</pre>
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 257</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 313</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_page'>page</span><span class='comma'>,</span> <span class='id identifier rubyid_results_per_page'>results_per_page</span><span class='comma'>,</span> <span class='id identifier rubyid_results_size'>results_size</span><span class='comma'>,</span> <span class='id identifier rubyid_total_results_size'>total_results_size</span><span class='comma'>,</span> <span class='id identifier rubyid_total_pages'>total_pages</span><span class='comma'>,</span> <span class='id identifier rubyid_next_page'>next_page</span><span class='comma'>,</span> <span class='id identifier rubyid_prev_page'>prev_page</span><span class='comma'>,</span> <span class='id identifier rubyid_results'>results</span><span class='rparen'>)</span>
   <span class='ivar'>@page</span> <span class='op'>=</span> <span class='id identifier rubyid_page'>page</span>
@@ -515,8 +508,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Returns the value of attribute next_page</p>
+    <p>Returns the value of attribute next_page</p>
 
 
   </div>
@@ -530,12 +522,12 @@
       <pre class="lines">
 
 
-255
-256
-257</pre>
+311
+312
+313</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 255</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 311</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_next_page'>next_page</span>
   <span class='ivar'>@next_page</span>
@@ -558,8 +550,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Returns the value of attribute page</p>
+    <p>Returns the value of attribute page</p>
 
 
   </div>
@@ -573,12 +564,12 @@
       <pre class="lines">
 
 
-255
-256
-257</pre>
+311
+312
+313</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 255</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 311</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_page'>page</span>
   <span class='ivar'>@page</span>
@@ -601,8 +592,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Returns the value of attribute prev_page</p>
+    <p>Returns the value of attribute prev_page</p>
 
 
   </div>
@@ -616,12 +606,12 @@
       <pre class="lines">
 
 
-255
-256
-257</pre>
+311
+312
+313</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 255</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 311</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_prev_page'>prev_page</span>
   <span class='ivar'>@prev_page</span>
@@ -644,8 +634,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Returns the value of attribute results</p>
+    <p>Returns the value of attribute results</p>
 
 
   </div>
@@ -659,12 +648,12 @@
       <pre class="lines">
 
 
-255
-256
-257</pre>
+311
+312
+313</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 255</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 311</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_results'>results</span>
   <span class='ivar'>@results</span>
@@ -687,8 +676,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Returns the value of attribute results_per_page</p>
+    <p>Returns the value of attribute results_per_page</p>
 
 
   </div>
@@ -702,12 +690,12 @@
       <pre class="lines">
 
 
-255
-256
-257</pre>
+311
+312
+313</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 255</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 311</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_results_per_page'>results_per_page</span>
   <span class='ivar'>@results_per_page</span>
@@ -730,8 +718,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Returns the value of attribute results_size</p>
+    <p>Returns the value of attribute results_size</p>
 
 
   </div>
@@ -745,12 +732,12 @@
       <pre class="lines">
 
 
-255
-256
-257</pre>
+311
+312
+313</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 255</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 311</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_results_size'>results_size</span>
   <span class='ivar'>@results_size</span>
@@ -773,8 +760,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Returns the value of attribute total_pages</p>
+    <p>Returns the value of attribute total_pages</p>
 
 
   </div>
@@ -788,12 +774,12 @@
       <pre class="lines">
 
 
-255
-256
-257</pre>
+311
+312
+313</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 255</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 311</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_total_pages'>total_pages</span>
   <span class='ivar'>@total_pages</span>
@@ -816,8 +802,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Returns the value of attribute total_results_size</p>
+    <p>Returns the value of attribute total_results_size</p>
 
 
   </div>
@@ -831,12 +816,12 @@
       <pre class="lines">
 
 
-255
-256
-257</pre>
+311
+312
+313</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 255</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 311</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_total_results_size'>total_results_size</span>
   <span class='ivar'>@total_results_size</span>
@@ -860,12 +845,15 @@
   
 
   
+    <span class="aliases">Also known as:
+    <span class="names"><span id='get-instance_method'>get</span></span>
+    </span>
+  
 
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Accessing the i-th document in the results</p>
+    <p>Accessing the i-th document in the results</p>
 
 
   </div>
@@ -879,12 +867,12 @@
       <pre class="lines">
 
 
-269
-270
-271</pre>
+325
+326
+327</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 269</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 325</span>
 
 <span class='kw'>def</span> <span class='op'>[]</span><span class='lparen'>(</span><span class='id identifier rubyid_i'>i</span><span class='rparen'>)</span>
   <span class='ivar'>@results</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span>
@@ -897,24 +885,52 @@
       <div class="method_details ">
   <h3 class="signature " id="each-instance_method">
   
-    - (<tt>Object</tt>) <strong>each</strong>(&amp;blk) 
+    - (<tt>Object</tt>) <strong>each</strong> {|document| ... }
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Iterates over received documents</p>
+
+<p>This method <em>does not</em> paginates by itself. So only the received document
+will be returned.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Yield Parameters:</p>
+<ul class="yieldparam">
+  
+    <li>
+      
+        <span class='name'>document</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Document.html" title="Prismic::Document (class)">Document</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-273
-274
-275</pre>
+336
+337
+338</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 273</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 336</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_each'>each</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_blk'>blk</span><span class='rparen'>)</span>
   <span class='ivar'>@results</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_blk'>blk</span><span class='rparen'>)</span>
@@ -927,7 +943,7 @@
       <div class="method_details ">
   <h3 class="signature " id="length-instance_method">
   
-    - (<tt>Object</tt>) <strong>length</strong> 
+    - (<tt>Fixum</tt>) <strong>length</strong> 
   
 
   
@@ -937,18 +953,41 @@
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Return the number of returned documents</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Fixum</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-278
-279
-280</pre>
+344
+345
+346</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 278</span>
+      <pre class="code"><span class="info file"># File 'lib/prismic.rb', line 344</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_length'>length</span>
   <span class='ivar'>@results</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span>
@@ -963,7 +1002,7 @@
 </div>
 
     <div id="footer">
-  Generated on Wed Apr 16 16:34:41 2014 by
+  Generated on Wed Apr 16 18:58:04 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.4 (ruby-2.1.1).
 </div>
